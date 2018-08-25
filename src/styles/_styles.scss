@@ -1,0 +1,171 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box !important;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.threesixty {
+	margin: 0 auto;
+	overflow: hidden;
+	max-height: 100%;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+  	-moz-osx-font-smoothing: grayscale;
+	width: auto;
+	&:fullscreen,
+	&:webkit-full-screen {
+		object-fit: contain;
+	}
+	.threesixty_images {
+		display: none;
+		width: 100%;
+		height: 100%;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		img {
+			top: 0;
+			left:0;
+			right:0;
+			bottom:0;
+            width: 100%;
+			height:100%;
+			object-fit: contain;
+			&.previous-image {
+				display: none;
+				/*
+		   		Do not put here any other styles.
+		   		It causes massive recalc / repaints and image flickering,
+		   		especially on Firefox.
+				*/
+			}
+			&.current-image {
+				display:block;
+				/*
+		   		Do not put here any other styles.
+		   		It causes massive recalc / repaints and image flickering,
+		   		especially on Firefox.
+				*/
+			}
+		}
+	}
+	.spinner {
+		width: 60px;
+		display: block;
+		margin: 0 auto;
+		height: 30px;
+		background: #333;
+		background: rgba(0, 0, 0, 0.7);
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+		span {
+			font-family: Arial, "MS Trebuchet", sans-serif;
+			font-size: 12px;
+			font-weight: bolder;
+			color: #FFF;
+			text-align: center;
+			line-height: 30px;
+			display: block;
+		}
+	}
+	.nav_bar {
+		position: absolute;
+	    color: #fff;
+	    z-index: 1;
+	    height: 32px;
+	    background: rgba(0, 0, 0, .6);
+	    border: 1px solid rgba(0, 0, 0, .7);
+	    border-radius: 5px;
+	    box-shadow: inset 0 0 5px hsla(0, 0%, 100%, .5);
+		&.bottom-right {
+			bottom: 10px;
+		    right: 20px;
+		}
+		&.bottom-left {
+			bottom: 10px;
+			left:20px;
+		}
+		&.top-left {
+			top: 10px;
+			left: 20px;
+		}
+		&.top-right {
+			top: 10px;
+			right: 20px;
+		}
+		&.top-center {
+			top: 10px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+		&.bottom-center {
+			bottom: 25px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+        .butn {
+			z-index: 2;
+		    float:left;
+		    width: 30px;
+		    height: 30px;
+		    padding: 7.5px;
+		    border-right: 1px solid rgba(0, 0, 0, .7);
+		    border-left: 1px solid rbga(255, 255, 255, .2);
+		    border-radius: 0;
+			cursor: pointer;
+			&:first-child {
+				border-left: none
+			}
+			&:last-child {
+				border-right: none
+			}
+            span {
+                z-index: 13;
+                display: block;
+                width: 15px;
+				height: 15px;
+				margin: auto;
+				&.icon-play {
+					background:url(/assets/sprite.png) no-repeat 0 0;
+				}
+				&.icon-pause {
+					background:url(/assets/sprite.png) no-repeat -15px 0;
+				}
+				&.icon-forward {
+					background:url(/assets/sprite.png) no-repeat -30px 0;
+				}
+				&.icon-back {
+					background:url(/assets/sprite.png) no-repeat -45px 0;
+				}
+				&.icon-fullscreen {
+					background:url(/assets/sprite.png) no-repeat -60px 0;
+				}
+				&.icon-resize {
+					background:url(/assets/sprite.png) no-repeat -75px 0;
+				}
+				&.icon-download {
+					background:url(/assets/sprite.png) no-repeat -90px 0;
+				}
+            }
+        }
+	}
+}
+
+:-webkit-full-screen,
+.threesixty:fullscreen {
+	max-width: 100%;
+	max-height: 100%;
+	height: auto !important;
+	width: auto !important;
+	&::backdrop {
+		background: transparent !important;
+	}
+	img {
+		max-width: 100% !important;
+		max-height: 100% !important;
+		margin: auto !important;
+	}
+}

@@ -1,5 +1,5 @@
 /*!
- * 360 degree Image Slider v2.5.0
+ * 360 degree Image Slider v2.5.2
  * http://gaurav.jassal.me
  * http://etetlow.co.uk
  * Copyright 2015, gaurav@jassal.me
@@ -59,7 +59,7 @@
         var base = this,
             AppConfig,
             frames = [],
-            VERSION = '2.5.0';
+            VERSION = '2.5.2';
         // Access to jQuery and DOM versions of element
         /**
          * @property {$el}
@@ -88,7 +88,7 @@
          *        width: 400,
          *        navigation: true,
          *        styles: {
-         *          border: 2px solide #b4b4b4,
+         *          border: 2px solid #b4b4b4,
          *          background: url(http://example.com/images/loader.gif) no-repeat
          *        }
          *      });
@@ -111,32 +111,32 @@
                 ah = AppConfig.height,
                 lr = ah / aw,
                 pr = aw / ah,
-                wiw = $(window).innerWidth(),
-                wih = $(window).innerHeight();
-            if (aw > wiw) {
-                base.$el.css({
-                    width: wiw + 'px',
-                    height: (wiw * lr) + 'px'
+                pw = base.el.parent().width(),
+                ph = base.el.parent().height(),
+                altHeight = $(window).height(),
+                altWidth = $(window).width(),
+                sum = pw * lr;
+
+            if (pw > altWidth) {
+                pw = altWidth;
+            }
+            if (ph > altHeight) {
+                ph = altHeight;
+            }
+            if ((pw * lr) > altHeight) {
+                base.el.css({
+                    height: altHeight + 'px',
+                    width: (altHeight * pr) + 'px'
                 });
-            } else if (ah > wih) {
-                base.$el.css({
-                    height: wih + 'px',
-                    width: (wih * pr) + 'px'
+            } else {
+                base.el.css({
+                    width: pw + 'px',
+                    height: (pw * lr) + 'px'
                 });
             }
         };
 
-        /* @method theme
-         * Function to allow theme.
-         */
-        base.theme = function () {
-            var theme = AppConfig.theme;
-            if (theme === 'light') {
-                $('.threesixty').removeClass('dark').addClass('light');
-            }
-        };
-
-        /*
+        /**
          * @method responsive
          * Function calculates and set responsive height and width
          *
@@ -144,38 +144,18 @@
 
         base.responsive = function () {
             if (AppConfig.responsive) {
-                var aw = AppConfig.width,
-                    ah = AppConfig.height,
-                    lr = ah / aw,
-                    pr = aw / ah,
-                    wiw = $(window).innerWidth(),
-                    wih = $(window).innerHeight(),
-                    slr = wih / wiw,
-                    aaw = base.$el.width(),
-                    aah = base.$el.height();
-                if (aah > wih || aw > ah && lr > slr) {
-                    base.$el.css({
-                        height: wih + 'px',
-                        width: (wih * pr) + 'px'
-                    });
-                } else if (aaw > wiw) {
-                    base.$el.css({
-                        width: wiw + 'px',
-                        height: (wiw * lr) + 'px'
-                    });
-                } else if (aw > ah && aah < wih) {
-                    base.$el.css({
-                        width: wiw + 'px',
-                        height: (wiw * lr) + 'px'
-                    });
-                } else if (ah > aw && aaw < wiw) {
-                    base.$el.css({
-                        height: wih + 'px',
-                        width: (wih * pr) + 'px'
-                    });
-                }         
+                base.resize();
             }
         };
+
+        /**
+         * @method fSBackgroundColor
+         * Sets background color when fullscreen
+         */
+         base.fSBackgroundColor = function() {
+             var bgColor = AppConfig.fSBackgroundColor;
+             return bgColor;
+         };
 
         /**
          * @method fullscreen
@@ -186,45 +166,21 @@
                 ah = AppConfig.height,
                 lr = ah / aw,
                 pr = aw / ah,
-                wsh = screen.height,
-                wsw = screen.width,
-                slr = wsh / wsw;
-            if (AppConfig.fullscreen) {      
+                wsh = $(window).height(),
+                wsw = $(window).width(),
+                bgColor = base.fSBackgroundColor;
+            if (AppConfig.fullscreen) {
                 var target = base.$el[0];
                 if (screenfull.enabled) {
                     screenfull.toggle(target);
-                    $('html').toggleClass('fullScreen');
-                    $('#fs').toggleClass('on off');
-                    if (AppConfig.responsive === false) {
-                        if ($('html').hasClass('fullScreen')) {
-                            screenfull.on('change', function() {
-                                if (aw > ah && lr < slr) {
-                                    base.$el.css({
-                                        width: wsw + 'px',
-                                        height: (wsw * lr) + 'px'
-                                    });
-                                } else if (ah > aw) {
-                                    base.$el.css({
-                                        height: wsh + 'px',
-                                        width: (wsh * pr) + 'px'
-                                    });
-                                } else if (aw > ah && lr > slr) {
-                                    base.$el.css({
-                                        height: wsh + 'px',
-                                        width: (wsh * pr) + 'px'
-                                    });
-                                }
-                            });
+                    screenfull.onchange(function() {
+                        if (screenfull.isFullscreen) {
+                            $('.btnFull span').removeClass('icon-fullscreen').addClass('icon-resize');
                         } else {
-                            screenfull.on('change', function() {
-                                base.$el.css({
-                                    width: aw + 'px',
-                                    height: ah + 'px'
-                                });
-                                base.resize();
-                            });
+                            $('.btnFull span').removeClass('icon-resize').addClass('icon-fullscreen');
+                            base.resize();
                         }
-                    }
+                    });
                 }
             }
         };
@@ -246,8 +202,6 @@
                 base.$el.css(AppConfig.styles);
             }
 
-            base.resize();
-
             base.$el.find(AppConfig.progress).css({
                 marginTop: ((AppConfig.height / 2) - 15) + 'px'
             });
@@ -267,7 +221,7 @@
             imageName = !AppConfig.imgArray ?
                 AppConfig.domain + AppConfig.imagePath + AppConfig.filePrefix + base.zeroPad((AppConfig.loadedImages + baseIndex)) + AppConfig.ext + ((base.browser.isIE()) ? '?' + new Date().getTime() : '') :
                 AppConfig.imgArray[AppConfig.loadedImages];
-            image = $('<img>').attr('src', imageName).addClass('previous-image').appendTo(li);
+            image = $('<img>').attr('src', imageName).attr('alt', '360 Slider images').addClass('previous-image normal').appendTo(li);
 
             frames.push(image);
 
@@ -299,7 +253,7 @@
         base.imagesLoaded = function () {
             var loaded = 0;
             $.each(frames, function (i, image) {
-                $(image).load(function () {
+                $(image).on('load', function () {
                     loaded += 1;
                     $(AppConfig.progress + ' span').text(Math.floor(loaded / AppConfig.totalFrames * 100) + '%');
                     if (loaded >= AppConfig.totalFrames) {
@@ -330,6 +284,9 @@
             base.$el.find(AppConfig.imgList).fadeIn();
             base.ready = true;
             AppConfig.ready = true;
+            setTimeout(function () {
+                base.resize();
+            }, 50);
 
             if (AppConfig.drag) {
                 base.initEvents();
@@ -337,10 +294,6 @@
             base.refresh();
             base.initPlugins();
             AppConfig.onReady();
-
-            setTimeout(function () {
-                base.resize();
-            }, 50);
         };
 
         /** @method initPlugins
@@ -362,45 +315,46 @@
          * settings.
          */
         base.showNavigation = function () {
-            if (AppConfig.navigation && !AppConfig.navigation_init) { 
-                var nav_bar, next, previous, play_stop, button;
+            if (AppConfig.navigation && !AppConfig.navigation_init) {
+                var nav_bar, next_btn, next, previous_btn, previous, play_stop_btn, play_stop, full_btn, full, position;
 
-                nav_bar = $('<div/>').attr('class', 'nav_bar');
+                if (AppConfig.position) {
+                    position = AppConfig.position;
+                    nav_bar = $('<div/>').attr('class', 'nav_bar ' + position);
+                } else {
+                    nav_bar = $('<div/>').attr('class', 'nav_bar top-right');
+                }
 
-                next = $('<a/>').attr({
-                    'href': '#',
-                    'class': 'nav_bar_next'
-                });
+                previous_btn = $('<div/>').attr('class', 'btnPrev butn');
+                previous = $('<span/>').attr('class', 'icon-back');
+                play_stop_btn = $('<div/>').attr('class', 'btnPlay butn');
+                play_stop = $('<span/>').attr('class', 'icon-play');
+                next_btn = $('<div/>').attr('class', 'btnNext butn');
+                next = $('<span/>').attr('class', 'icon-forward');
 
-                previous = $('<a/>').attr({
-                    'href': '#',
-                    'class': 'nav_bar_previous'
-                });
-
-                play_stop = $('<a/>').attr({
-                    'href': '#',
-                    'class': 'nav_bar_play'
-                });
-
-                nav_bar.append(previous);
-                nav_bar.append(play_stop);
-                nav_bar.append(next);
-                base.$el.prepend(nav_bar);
-
-                next.bind('mousedown touchstart', base.next);
-                previous.bind('mousedown touchstart', base.previous);
-                play_stop.bind('mousedown touchstart', base.play_stop);
+                previous_btn.append(previous);
+                play_stop_btn.append(play_stop);
+                next_btn.append(next);
+                nav_bar.append(previous_btn);
+                nav_bar.append(play_stop_btn);
+                nav_bar.append(next_btn);
 
                 if (AppConfig.fullscreen) {
-                    button = $('<a/>').attr({
-                        'id': 'fs',
-                        'class': 'off',
-                        'href': '#' 
-                    });
-                    base.$el.append(button);
-                    button.bind('mousedown touchstart', base.fullscreen);
+                    full_btn = $('<div/>').attr('class', 'btnFull butn');
+                    full = $('<span/>').attr('class', 'icon-fullscreen');
+                    full_btn.append(full);
+                    nav_bar.append(full_btn);
                 }
-                base.theme();
+
+                base.$el.prepend(nav_bar);
+
+                next_btn.bind('mousedown touchstart', base.next);
+                previous_btn.bind('mousedown touchstart', base.previous);
+                play_stop_btn.bind('mousedown touchstart', base.play_stop);
+
+                if (AppConfig.fullscreen) {
+                    full_btn.bind('mousedown touchstart', base.fullscreen);
+                }
                 AppConfig.navigation_init = true;
             }
         };
@@ -419,10 +373,10 @@
             if (!AppConfig.autoplay) {
                 AppConfig.autoplay = true;
                 AppConfig.play = setInterval(base.moveToNextFrame, AppConfig.playSpeed);
-                $(event.currentTarget).removeClass('nav_bar_play').addClass('nav_bar_stop');
+                $(event.currentTarget).children('span').removeClass('icon-play').addClass('icon-pause');
             } else {
                 AppConfig.autoplay = false;
-                $(event.currentTarget).removeClass('nav_bar_stop').addClass('nav_bar_play');
+                $(event.currentTarget).children('span').removeClass('icon-pause').addClass('icon-play');
                 clearInterval(AppConfig.play);
                 AppConfig.play = null;
             }
@@ -568,50 +522,64 @@
          *
          */
         base.initEvents = function () {
-            base.$el.bind('mousedown touchstart touchmove touchend mousemove click', function (event) {
+            if (!AppConfig.navigation && AppConfig.newGui) {
+                base.initAlt();
+            } else {
+                base.$el.bind('mousedown touchstart touchmove touchend mousemove click', function (event) {
 
-                event.preventDefault();
+                    event.preventDefault();
 
-                if ((event.type === 'mousedown' && event.which === 1) || event.type === 'touchstart') {
-                    AppConfig.pointerStartPosX = base.getPointerEvent(event).pageX;
-                    AppConfig.dragging = true;
-                    AppConfig.onDragStart(AppConfig.currentFrame);
-                } else if (event.type === 'touchmove') {
-                    base.trackPointer(event);
-                } else if (event.type === 'touchend') {
+                    if ((event.type === 'mousedown' && event.which === 1) || event.type === 'touchstart') {
+                        AppConfig.pointerStartPosX = base.getPointerEvent(event).pageX;
+                        AppConfig.dragging = true;
+                        AppConfig.onDragStart(AppConfig.currentFrame);
+                    } else if (event.type === 'touchmove') {
+                        base.trackPointer(event);
+                    } else if (event.type === 'touchend') {
+                        AppConfig.dragging = false;
+                        AppConfig.onDragStop(AppConfig.endFrame);
+                    }
+                });
+
+                $(document).bind('mouseup', function (event) {
                     AppConfig.dragging = false;
                     AppConfig.onDragStop(AppConfig.endFrame);
-                }
-            });
+                    $(this).css('cursor', 'none');
+                });
 
-            $(document).bind('mouseup', function (event) {
-                AppConfig.dragging = false;
-                AppConfig.onDragStop(AppConfig.endFrame);
-                $(this).css('cursor', 'none');
-            });
+                $(window).bind('resize', function (event) {
+                    base.responsive();
+                });
 
-            $(window).bind('resize', function (event) {
-                base.responsive();
-            });
-
-            $(document).bind('mousemove', function (event) {
-                if (AppConfig.dragging) {
-                    event.preventDefault();
-                    if (base.browser.isIE && AppConfig.showCursor) {
-                        base.$el.css('cursor', 'url(assets/images/hand_closed.png), auto');
+                $(document).bind('mousemove', function (event) {
+                    if (AppConfig.dragging) {
+                        event.preventDefault();
+                        if (base.browser.isIE && AppConfig.showCursor) {
+                            base.$el.css('cursor', 'url(/assets/icons/hand_closed.png), auto');
+                        }
+                    } else {
+                        if (!base.browser.isIE && AppConfig.showCursor) {
+                            base.$el.css('cursor', 'url(/assets/icons/hand_open.png), auto');
+                        }
                     }
-                } else {
-                    if (!base.browser.isIE && AppConfig.showCursor) {
-                        base.$el.css('cursor', 'url(assets/images/hand_open.png), auto');
-                    }
-                }
-                base.trackPointer(event);
+                    base.trackPointer(event);
 
-            });
+                });
+            }
+        };
 
-            $(window).resize(function () {
-                base.responsive();
-            });
+        /**
+         * @method initAlt
+         * @private
+         * Use range slider to control threesixty slider
+         */
+        base.initAlt = function() {
+            var step = base.$el.find('input[type="range"]').val(),
+                current = base.getCurrentFrame();
+            console.log(step);
+            console.log(current);
+            $('.rangeValue').html(step);
+
         };
 
         /**
@@ -668,7 +636,7 @@
         };
 
         /**
-         * @method refresh
+         * @method render
          * @private
          * Function render the animation frames on the screen with easing effect.
          */
@@ -931,15 +899,26 @@
              */
             navigation: false,
             /**
-             * @cfg {String} theme [dark]
-             * Choose Light or Dark for navigation and fullscreen buttons
+             * @cfg {Boolean} newGui[false]
+             * State if new gui be used instead of navigation.
              */
-            theme: 'dark',
+            newGui: false,
+            /**
+             * @cfg {string} position[top-right]
+             * Positioning of navigation.
+             * Options are top-left, top-center, top-right, bottom-right, bottom-center, bottom-left.
+             */
+            position: 'top-right',
             /**
              * @cfg {Boolean} fullscreen [false]
              * FullScreen now an option instead of plugin
              */
             fullscreen: false,
+            /**
+             * @cfg {string} fSBackgroundColor [white]
+             * Set color of background in FullScreen (css style)
+             */
+            fSBackgroundColor: '#fff',
             /**
              * @cfg {Boolean} autoplay[false]
              * Autoplay the 360 animation
@@ -961,7 +940,7 @@
              */
             disableWrap: false,
             /**
-             * Responsive width
+             * Full aspect ratio responsiveness
              * @type {Boolean}
              */
             responsive: false,

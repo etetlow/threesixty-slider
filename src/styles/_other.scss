@@ -1,0 +1,454 @@
+$icon-font-path:        '../fonts/';
+$icon-font-name:        'glyphicons-halflings-regular';
+$base-font-size:		16;
+$base-line-height:		26;
+$ratio:             	1.625;
+// String Replace
+@function str-replace($string, $search, $replace: "") {
+	$index: str-index($string, $search);
+
+	@if $index {
+		@return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+	}
+
+	@return $string;
+}
+
+// Font Face
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf otf svg) {
+	$src: null;
+
+	$extmods: (
+		eot: "?",
+		svg: "#" + str-replace($name, " ", "_")
+	);
+
+	$formats: (
+		otf: "opentype",
+		ttf: "truetype"
+	);
+
+	@each $ext in $exts {
+		$extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+		$format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+		$src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+	}
+
+	@font-face {
+		font-family: quote($name);
+		font-style: $style;
+		font-weight: $weight;
+		src: $src;
+	}
+}
+
+// font-size and line-height in rem
+@mixin font-size($font-size) {
+    font-size:			$font-size * 1px;
+    font-size:			($font-size / $base-font-size) * 1rem;
+    line-height:		(($font-size * $ratio) / $base-font-size) * 1rem;
+}
+
+// Square Root function
+@function sqrt($r) {
+    $x0: 1;
+    $x1: $x0;
+    @for $i from 1 through 10 {
+        $x1: $x0 - ($x0 * $x0 - abs($r)) / (2 * $x0);
+        $x0: $x1;
+    }
+    @return $x1;
+}
+
+// Golden Ratio to get perfect font-size and line-height for the width provided
+@mixin golden-ratio($width) {
+
+    $line-height:		sqrt($width);
+	line-height:		($line-height / $base-font-size) * 1rem;
+    $font-size:         $line-height / $ratio;
+	font-size:			($font-size / $base-font-size) * 1rem;
+}
+
+// hide text
+@mixin hide-text() {
+	font: 0/0 a;
+	color: transparent;
+	text-shadow: none;
+	border: 0;
+}
+
+// responsive-ratio
+@mixin pseudo($display: block, $pos: absolute, $content: '') {
+    content: $content;
+    display: $display;
+    position: $pos;
+}
+
+@mixin responsive-ratio($x, $y, $pseudo: false) {
+    $padding: unquote( ( $y / $x) * 100 + '%');
+    @if $pseudo {
+        &:before {
+            @include pseudo($pos: relative);
+            width: 100%;
+            padding-top: $padding;
+        }
+    }
+    @else {
+        padding-top: $padding;
+    }
+}
+
+$countDefault: 1 !default;
+$durationDefault: 1s !default;
+$delayDefault: 0s !default;
+$functionDefault: ease !default;
+$fillDefault: both;
+$visibilityDefault: hidden !default;
+
+@mixin count($count: 1) {
+	-webkit-animation-iteration-count: $count;
+	-moz-animation-iteration-count: $count;
+	-ms-animation-iteration-count: $count;
+	-o-animation-iteration-count: $count;
+	animation-iteration-count: $count;
+}
+
+@mixin duration($duration: 1s) {
+	-webkit-animation-duration: $duration;
+	-moz-animation-duration: $duration;
+	-ms-animation-duration: $duration;
+	-o-animation-duration: $duration;
+	animation-duration: $duration;
+}
+
+@mixin delay($delay: 0.2s) {
+	-webkit-animation-delay: $delay;
+	-moz-animation-delay: $delay;
+	-ms-animation-delay: $delay;
+	-o-animation-delay: $delay;
+	animation-delay: $delay;
+}
+
+@mixin function($function: ease) {
+	-webkit-animation-timing-function: $function;
+	-moz-animation-timing-function: $function;
+	-ms-animation-timing-function: $function;
+	-o-animation-timing-function: $function;
+	animation-timing-function: $function;
+}
+
+@mixin fill-mode($fill: both) {
+	-webkit-animation-fill-mode: $fill;
+	-moz-animation-fill-mode: $fill;
+	-ms-animation-fill-mode: $fill;
+	-o-animation-fill-mode: $fill;
+	animation-fill-mode: $fill;
+}
+
+@mixin visibility($visibility: hidden) {
+	-webkit-backface-visibility: $visibility;
+	-moz-backface-visibility: $visibility;
+	-ms-backface-visibility: $visibility;
+	-o-backface-visibility: $visibility;
+	backface-visibility: $visibility;
+}
+
+@mixin display($display: block) {
+	display: $display;
+}
+
+@mixin transform($property) {
+	-webkit-transform: $property;
+	-moz-transform: $property;
+	-ms-transform: $property;
+	-o-transform: $property;
+	transform: $property;
+}
+
+@mixin transform-origin($transform-origin: center center) {
+	-webkit-transform-origin: $transform-origin;
+	-moz-transform-origin: $transform-origin;
+	-ms-transform-origin: $transform-origin;
+	-o-transform-origin: $transform-origin;
+	transform-origin: $transform-origin;
+}
+
+@mixin transform-style($transform-style: flat) {
+	-webkit-transform-style: $transform-style;
+	-moz-transform-style: $transform-style;
+	-o-transform-style: $transform-style;
+	transform-style: $transform-style;
+}
+
+@mixin animation-name($animation-name) {
+	-webkit-animation-name: $animation-name;
+	-moz-animation-name: $animation-name;
+	-ms-animation-name: $animation-name;
+	-o-animation-name: $animation-name;
+	animation-name: $animation-name;
+}
+
+@mixin keyframes($animation-name) {
+	@-webkit-keyframes #{$animation-name} {
+		@content;
+	}
+	@-moz-keyframes #{$animation-name} {
+		@content;
+	}
+	@-ms-keyframes #{$animation-name} {
+		@content;
+	}
+	@-o-keyframes #{$animation-name} {
+		@content;
+	}
+	@keyframes #{$animation-name} {
+		@content;
+	}
+}
+
+@include keyframes(slideOutRight) {
+	0% {
+		@include transform(translateX(0));
+	}
+
+	100% {
+		opacity: 0;
+		@include transform(translateX(40px));
+	}
+}
+
+@mixin slideOutRight($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+	@include animation-name(slideOutRight);
+	@include count($count);
+	@include duration($duration);
+	@include delay($delay);
+	@include function($function);
+	@include fill-mode($fill);
+	@include visibility($visibility);
+}
+
+@include keyframes(slideInRight) {
+	0% {
+		opacity: 0;
+		@include transform(translateX(40px));
+	}
+
+	100% {
+		opacity: 1;
+		@include transform(translateX(0));
+	}
+}
+
+@mixin slideInRight($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+	@include animation-name(slideInRight);
+	@include count($count);
+	@include duration($duration);
+	@include delay($delay);
+	@include function($function);
+	@include fill-mode($fill);
+	@include visibility($visibility);
+}
+
+@include keyframes(ripple) {
+	100% {
+		opacity: 0;
+		@include transform(scale(2.5));
+	}
+}
+
+@mixin ripple($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+	@include animation-name(ripple);
+	@include count($count);
+	@include duration($duration);
+	@include delay($delay);
+	@include function($function);
+	@include fill-mode($fill);
+	@include visibility($visibility);
+}
+
+// Ascending
+// Used to evaluate Sass maps like our grid breakpoints.
+@mixin _assert-ascending($map, $map-name) {
+  $prev-key: null;
+  $prev-num: null;
+  @each $key, $num in $map {
+    @if $prev-num == null {
+      // Do nothing
+    } @else if not comparable($prev-num, $num) {
+      @warn "Potentially invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} whose unit makes it incomparable to #{$prev-num}, the value of the previous key '#{$prev-key}' !";
+    } @else if $prev-num >= $num {
+      @warn "Invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} which isn't greater than #{$prev-num}, the value of the previous key '#{$prev-key}' !";
+    }
+    $prev-key: $key;
+    $prev-num: $num;
+  }
+}
+
+// Starts at zero
+// Another grid mixin that ensures the min-width of the lowest breakpoint starts at 0.
+@mixin _assert-starts-at-zero($map) {
+  $values: map-values($map);
+  $first-value: nth($values, 1);
+  @if $first-value != 0 {
+    @warn "First breakpoint in `$grid-breakpoints` must start at 0, but starts at #{$first-value}.";
+  }
+}
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+
+@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
+@include _assert-starts-at-zero($grid-breakpoints);
+
+// Breakpoint viewport sizes and media queries.
+//
+// Breakpoints are defined as a map of (name: minimum width), order from small to large:
+//
+//    (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px)
+//
+// The map defined in the `$grid-breakpoints` global variable is used as the `$breakpoints` argument by default.
+
+// Name of the next breakpoint, or null for the last breakpoint.
+//
+//    >> breakpoint-next(sm)
+//    md
+//    >> breakpoint-next(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))
+//    md
+//    >> breakpoint-next(sm, $breakpoint-names: (xs sm md lg xl))
+//    md
+@function breakpoint-next($name, $breakpoints: $grid-breakpoints, $breakpoint-names: map-keys($breakpoints)) {
+  $n: index($breakpoint-names, $name);
+  @return if($n < length($breakpoint-names), nth($breakpoint-names, $n + 1), null);
+}
+
+// Minimum breakpoint width. Null for the smallest (first) breakpoint.
+//
+//    >> breakpoint-min(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))
+//    576px
+@function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
+  $min: map-get($breakpoints, $name);
+  @return if($min != 0, $min, null);
+}
+
+// Maximum breakpoint width. Null for the largest (last) breakpoint.
+// The maximum value is calculated as the minimum of the next one less 0.02px
+// to work around the limitations of `min-` and `max-` prefixes and viewports with fractional widths.
+// See https://www.w3.org/TR/mediaqueries-4/#mq-min-max
+// Uses 0.02px rather than 0.01px to work around a current rounding bug in Safari.
+// See https://bugs.webkit.org/show_bug.cgi?id=178261
+//
+//    >> breakpoint-max(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))
+//    767.98px
+@function breakpoint-max($name, $breakpoints: $grid-breakpoints) {
+  $next: breakpoint-next($name, $breakpoints);
+  @return if($next, breakpoint-min($next, $breakpoints) - .02px, null);
+}
+
+// Returns a blank string if smallest breakpoint, otherwise returns the name with a dash infront.
+// Useful for making responsive utilities.
+//
+//    >> breakpoint-infix(xs, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))
+//    ""  (Returns a blank string)
+//    >> breakpoint-infix(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))
+//    "-sm"
+@function breakpoint-infix($name, $breakpoints: $grid-breakpoints) {
+  @return if(breakpoint-min($name, $breakpoints) == null, "", "-#{$name}");
+}
+
+// Media of at least the minimum breakpoint width. No query for the smallest breakpoint.
+// Makes the @content apply to the given breakpoint and wider.
+@mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
+  $min: breakpoint-min($name, $breakpoints);
+  @if $min {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+// Media of at most the maximum breakpoint width. No query for the largest breakpoint.
+// Makes the @content apply to the given breakpoint and narrower.
+@mixin media-breakpoint-down($name, $breakpoints: $grid-breakpoints) {
+  $max: breakpoint-max($name, $breakpoints);
+  @if $max {
+    @media (max-width: $max) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+// Media that spans multiple breakpoint widths.
+// Makes the @content apply between the min and max breakpoints
+@mixin media-breakpoint-between($lower, $upper, $breakpoints: $grid-breakpoints) {
+  $min: breakpoint-min($lower, $breakpoints);
+  $max: breakpoint-max($upper, $breakpoints);
+
+  @if $min != null and $max != null {
+    @media (min-width: $min) and (max-width: $max) {
+      @content;
+    }
+  } @else if $max == null {
+    @include media-breakpoint-up($lower, $breakpoints) {
+      @content;
+    }
+  } @else if $min == null {
+    @include media-breakpoint-down($upper, $breakpoints) {
+      @content;
+    }
+  }
+}
+
+// Media between the breakpoint's minimum and maximum widths.
+// No minimum for the smallest breakpoint, and no maximum for the largest one.
+// Makes the @content apply only to the given breakpoint, not viewports any wider or narrower.
+@mixin media-breakpoint-only($name, $breakpoints: $grid-breakpoints) {
+  $min: breakpoint-min($name, $breakpoints);
+  $max: breakpoint-max($name, $breakpoints);
+
+  @if $min != null and $max != null {
+    @media (min-width: $min) and (max-width: $max) {
+      @content;
+    }
+  } @else if $max == null {
+    @include media-breakpoint-up($name, $breakpoints) {
+      @content;
+    }
+  } @else if $min == null {
+    @include media-breakpoint-down($name, $breakpoints) {
+      @content;
+    }
+  }
+}
+
+$carwidth:	1000px;
+$carheight:	447px;
+$padding:	30px;
+
+@mixin sitOnTheBottom($carwidth, $carheight, $padding) {
+	$ratio:				$carheight / $carwidth;
+	$actualHeight:		calc((100vw - #{$padding}) * #{$ratio});
+	$margin:			calc(100vh - #{$actualHeight});
+	margin-top: 		$margin;
+}
+
+@mixin sitInTheMiddle($width, $height, $header: 0px) {
+	$ratio:				$height / $width;
+	$actualHeight:		calc(100vw * #{$ratio});
+	$space:				calc(100vh - #{$actualHeight});
+	$margin:			calc((#{$space} / 2) - #{$header});
+	margin-top: 		$margin;
+}

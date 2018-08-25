@@ -1,78 +1,858 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta http-equiv="content-type" content="text/html; charset-utf-8" />
-<meta name="viewport" content="width=device-width" />
-<link rel="shortcut icon" type="image/png" href="favicon.png" />
-<link href="dist/css/threesixty.css" rel="stylesheet">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="HandheldFriendly" content="true">
+<meta name="MobileOptimized" content="width">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#acdded">
+<meta name="keywords" content="">
+<meta name="description" content="ThreeSixty-Slider: Product Display Model">
+<meta name="author" content="E.Tetlow">
+<meta name="rating" content="General">
+<title>ThreeSixty Slider</title>
+<!-- generics -->
+<link rel="icon" href="assets/favicon/favicon32.png" sizes="32x32">
+<link rel="icon" href="assets/favicon/favicon57.png" sizes="57x57">
+<link rel="icon" href="assets/favicon/favicon76.png" sizes="76x76">
+<link rel="icon" href="assets/favicon/favicon96.png" sizes="96x96">
+<link rel="icon" href="assets/favicon/favicon128.png" sizes="128x128">
+<link rel="icon" href="assets/favicon/favicon228.png" sizes="228x228">
+<!-- Android -->
+<link rel="shortcut icon" sizes="196x196" href="assets/favicon/favicon196.png">
+<!-- iOS -->
+<link rel="apple-touch-icon" href="assets/favicon/favicon120.png" sizes="120x120">
+<link rel="apple-touch-icon" href="assets/favicon/favicon152.png" sizes="152x152">
+<link rel="apple-touch-icon" href="assets/favicon/favicon180.png" sizes="180x180">
+<!-- Windows 8  IE 10-->
+<meta name="msapplication-TileColor" content="#000000">
+<meta name="msapplication-TileImage" content="assets/favicon/favicon144.png">
+<!--— Windows 8.1 + IE11 and above —-->
+<meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
+<meta name="theme color" content="#acdded">
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+<!-- CSS -->
+<link href="dist/css/vendor/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="dist/css/vendor/prism.css" rel="stylesheet">
+<link href="dist/css/vendor/prism-line-numbers.css" rel="stylesheet">
+<link href="dist/css/vendor/prism-toolbar.css" rel="stylesheet">
+<link href="dist/css/threesixty.min.css" rel="stylesheet">
+<link href="dist/css/custom.min.css" rel="stylesheet">
+<!--[if IE 9]>
+<link href="dist/css/ie.min.css" rel="stylesheet">
+<![endif]-->
+<!--[if lte IE 8]>
+<link href="https://cdn.jsdelivr.net/gh/coliff/bootstrap-ie8/css/bootstrap-ie8.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/g/html5shiv@3.7.3"></script>
+<![endif]-->
 </head>
 <body>
-	<div class="threesixty car dark">
-		<div class="spinner">
-			<span>0%</span>
-		</div>
-		<ol class="threesixty_images"></ol>
-	</div>
-<script src="dist/vendor/jquery.min.js"></script>
-<script src="dist/vendor/screenfull.js"></script>
-<script src="dist/js/threesixty.js"></script>
-<script>
+    <div class="overlay">
+        <a class="close position-absolute top left">X</a>
+        <div class="ajaxLoad"></div>
+    </div>
+    <nav>
+        <div class="big-menu container-fluid">
+            <div class="slim-menu">
+                <div class="menu-btn">
+                    <a id="trigger" href="#">
+                        <span class="hamburger hamburger--spin">
+		                <span class="hamburger-box">
+		                    <span class="hamburger-inner"></span>
+                        </span>
+                        </span>
+                    </a>
+                </div>
+                <ul class="slim-links">
+                    <li><a href="#index" data-tooltip="left" title="Home" class="active"></a></li>
+                    <li><a href="#features" data-tooltip="left" title="Features"></a></li>
+                    <li><a href="#default" data-tooltip="left" title="Default Configuration"></a></li>
+                    <li><a href="#extended" data-tooltip="left" title="Extended Configuration"></a></li>
+                    <li><a href="#custom" data-tooltip="left" title="Custom Controls"></a></li>
+                    <li><a href="#ajax" data-tooltip="left" title="Ajax"></a></li>
+                    <li><a href="#examples" data-tooltip="left" title="More Examples"></a></li>
+                </ul>
+            </div>
+            <div class="row">
+                <div class="branding large">
+                    <div class="branding-image"></div>
+                    <div class="branding-text">
+                        <h1>ThreeSixty-Slider</h1>
+                        <h4>360&deg; Image Slider plugin v2.5.2</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <ul class="nav-links">
+                    <li><a href="#index">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li class="expanded">Documentation
+                        <ul class="docs-list">
+                            <li><a href="#default">Default Configuration</a></li>
+                            <li><a href="#extended">Extended Configuration</a></li>
+                            <li><a href="#custom">Custom Controls</a></li>
+                            <li><a class="active" href="#ajax">Ajax</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#examples">More Examples</a></li>
+                </ul>
+            </div>
+            <div class="row align-items-end">
+                <div class="icons">
+                    <a data-tooltip="top" title="app: ie9+">
+                        <img src="assets/browsers/edge.png" alt="Edge" />
+                    </a>
+                    <a data-tooltip="top" title="app: 6+, fullscreen: 30+">
+                        <img src="assets/browsers/firefox.png" alt="Firefox" />
+                    </a>
+                    <a data-tooltip="top" title="app: 4+">
+                        <img src="assets/browsers/safari.png" alt="Safari" />
+                    </a>
+                    <a data-tooltip="top" title="app &amp; fullscreen: 12.1+">
+                        <img src="assets/browsers/opera.png" alt="Opera" />
+                    </a>
+                    <a data-tooltip="top" title="app &amp; fullscreen: 15+">
+                        <img src="assets/browsers/chrome.png" alt="Chrome" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="sections" id="vertigo">
+            <section id="index" class="section active">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="branding large">
+                                <div class="branding-image"></div>
+                                <div class="branding-text">
+                                    <h1>ThreeSixty-Slider</h1>
+                                    <h4>360&deg; Image Slider plugin v2.5.2</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-xl-10 col-lg-12 col-md-12 col-sm-12 col-12 align-self-end">
+                            <div class="threesixty car">
+                                <div class="spinner">
+                                    <span>0%</span>
+                                </div>
+                                <ol class="threesixty_images"></ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="features" class="section">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="branding medium">
+                                <div class="branding-image"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 12 col-xs-12">
+                            <div class="instruction">
+                                <h2>Features</h2>
+                                <p>Since taking over this plugin, not only have we rewritten large chuncks to make this application quicker and more efficient, but we've also improved the responsive and fullscreen elements. Other features have also been added and we have more in the pipeline. Be sure to keep an eye on our development branch for a taste of things to come.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-between">
+                        <div class="col-4">
+                            <div class="feature-item 360-degrees">
+                                <div class="feature-image">
+                                    <img src="assets/icons/360-degrees.png" alt="360-degrees" width="125" height="125" />
+                                </div>
+                                <div class="feature-title">
+                                    <h4>360 degrees</h4>
+                                </div>
+                                <div class="feature-desc">
+                                    <p>Provides you with the ability to view something a full 360 degrees.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="feature-item fullscreen">
+                                <div class="feature-image">
+                                    <img src="assets/icons/expand.png" alt="fullscreen" width="125" height="125" />
+                                </div>
+                                <div class="feature-title">
+                                    <h4>FullScreen</h4>
+                                </div>
+                                <div class="feature-desc">
+                                    <p>Fullscreen with aspect-ratio in mind and all in one click.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="feature-item responsive">
+                                <div class="feature-image">
+                                    <img src="assets/icons/responsive.png" alt="responsive" width="125" height="125" />
+                                </div>
+                                <div class="feature-title">
+                                    <h4>Responsive</h4>
+                                </div>
+                                <div class="feature-desc">
+                                    <p>Fully responsive with any size parent and always with correct aspect-ratio.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-between">
+                        <div class="col-4">
+                            <div class="feature-item touch">
+                                <div class="feature-image">
+                                    <img src="assets/icons/tap.png" alt="touch" width="125" height="125" />
+                                </div>
+                                <div class="feature-title">
+                                    <h4>Touch Enabled</h4>
+                                </div>
+                                <div class="feature-desc">
+                                    <p>Touch Enabled straight out of the box.</p>
+                                </div>
+                            </div>
+                        </div>                    
+                        <div class="col-4">
+                            <div class="feature-item snap-shot">
+                                <div class="feature-image">
+                                    <img src="assets/icons/push-pin.png" alt="position" width="125" height="125" />
+                                </div>
+                                <div class="feature-title">
+                                    <h4>Position</h4>
+                                </div>
+                                <div class="feature-desc">
+                                    <p>Position your navigation bar in one of the corners or top or bottom center.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="feature-item controls">
+                                <div class="feature-image">
+                                    <img src="assets/icons/game.png" alt="controls" width="125" height="125" />
+                                </div>
+                                <div class="feature-title">
+                                    <h4>Custom Controls</h4>
+                                </div>
+                                <div class="feature-desc">
+                                    <p>With our really easy to use api you can make your own custom controls.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="default" class="section docs">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="branding medium">
+                                <div class="branding-image"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="instruction">
+                                <h2>Default Configuration</h2>
+                                <p>The ThreeSixty-Slider is extremely easy to set up. Just insert the HTML snippet below into your page with the correct path to your threesixty css and javaScript files. Change "your-class-name" to the classname you wish to use.</p>
+                                <p>Then add the javaScript example shown to your page just before the closing body tag or to a seperate javaScript file. Replace "your-class-name" with the classname you chose and change "your_variable" to your own choice. You can later use this variable to create custom navigation. Fill in the options according to your needs.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <figure>
+                                <figcaption>HTML</figcaption>
+                                <pre id="pre1" class="line-numbers" data-start="1">
+                                <code class="language-markup">
+&lt;head&gt;
+&lt;link href="path-to-threesixty.min.css" rel="stylesheet"&gt;
+&lt;script src="path-to-threesixty.min.js" type="text/javaScript"&gt;&lt;script&gt;
+&lt;/head&gt;
+
+&lt;div class="threesixty your-class-name"&gt;
+    &lt;div class="spinner"&gt;
+        &lt;span&gt;0%&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;ol class="threesixty_images"&gt;&lt;/ol&gt;
+&lt;/div>
+                                </code>
+                            </pre>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <figure>
+                                <figcaption>JavaScript</figcaption>
+                                <pre id="pre2" class="line-numbers" data-start="1">
+                                <code class="language-javaScript">
 $(document).ready(function() {
-	var three60 = $('.car').ThreeSixty({
-		totalFrames: 100,
-        endFrame: 100,
+    var your_variable = $('.your-class-name').ThreeSixty({
+        totalFrames: 52, // total Integer of images
+        endFrame: 30, // the end frame of auto spin animation, making the next image the one that starts
+        currentFrame: 1, // the start frame of autospin
+        imgList: '.threesixty_images', // selector for image list
+        progress: '.spinner', // selector to show the loading progress
+        imagePath:'assets/car/', // path to images
+        filePrefix: '', // file prefix if any
+        ext: '.png', // image extension
+        height: 447,
+        width: 1000,
+        disableSpin: false, // to disable auto spin animation
+        zeroPadding: false, // if your image files are zero padded
+        navigation: true, // default navigation bar
+        position: 'bottom-center' // positioning for your navigation
+    });
+});
+                                </code>
+                            </pre>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="extended" class="section docs">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="branding medium">
+                                <div class="branding-image"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="instruction">
+                                <h2>Extended Configuration</h2>
+                                <p>Below is the full list of configuration values that you can pass in when you initialise 360 slider. This includes some of the features mentioned before. The other features are added by default. Beware that some of the features will reduce the browser compatibility of 360 slider. Click on the browser icons in the main menu for information.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <table class="table table-striped">
+                                <thead class="header">
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Config</th>
+                                        <th scope="col">Default value</th>
+                                        <th scope="col">Type</th>
+                                        <th scope="col">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>totalFrames</td>
+                                        <td>180</td>
+                                        <td>Integer</td>
+                                        <td>Set total number of frames used in the 360 rotation</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>currentFrame</td>
+                                        <td>1</td>
+                                        <td>Integer</td>
+                                        <td>Set the starting point of the auto spin on initilise</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>endFrame</td>
+                                        <td>180</td>
+                                        <td>Integer</td>
+                                        <td>Set the frame where you want the auto spin to stop</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">4</th>
+                                        <td>framerate</td>
+                                        <td>60</td>
+                                        <td>Integer</td>
+                                        <td>Framerate for the spin animation</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">6</th>
+                                        <td>filePrefix</td>
+                                        <td>''</td>
+                                        <td>String</td>
+                                        <td>File prefix for your images. If your file's name is foo-bar-001.png then filePrefix will be foo-bar-</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">7</th>
+                                        <td>ext</td>
+                                        <td>png</td>
+                                        <td>String</td>
+                                        <td>File extension of your images</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">8</th>
+                                        <td>height</td>
+                                        <td>300</td>
+                                        <td>Integer</td>
+                                        <td>Height of your images</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">9</th>
+                                        <td>width</td>
+                                        <td>300</td>
+                                        <td>Integer</td>
+                                        <td>Width of your images</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">10</th>
+                                        <td>style</td>
+                                        <td>{}</td>
+                                        <td>Object</td>
+                                        <td>Object container styles for the preloader similar to jQuery.css({})</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">11</th>
+                                        <td>navigation</td>
+                                        <td>true</td>
+                                        <td>Boolean</td>
+                                        <td>Set false if you don't want default navigation controls</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">12</th>
+                                        <td>position</td>
+                                        <td>top-right</td>
+                                        <td>String</td>
+                                        <td>Sets the position of the navigation bar within the slider.<br />Choice of 'top-left', 'top-center,' 'top-right', 'bottom-left', 'bottom-center', 'bottom-right'</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">13</th>
+                                        <td>autoplayDirection</td>
+                                        <td>1</td>
+                                        <td>Integer</td>
+                                        <td>Control the direction of the spin dependent on your images. You can use 1 or -1</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">14</th>
+                                        <td>drag</td>
+                                        <td>true</td>
+                                        <td>Boolean</td>
+                                        <td>Set false if you want to disable mouse and touch events on the slider</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">15</th>
+                                        <td>disableSpin</td>
+                                        <td>false</td>
+                                        <td>Boolean</td>
+                                        <td>Will disable the initial spin on load</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">16</th>
+                                        <td>zeroPadding</td>
+                                        <td>false</td>
+                                        <td>Boolean</td>
+                                        <td>Set true if your numbering is 0 padded to the same character length</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">17</th>
+                                        <td>responsive</td>
+                                        <td>false</td>
+                                        <td>Boolean</td>
+                                        <td>Enables full aspect-ratio responsiveness</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">18</th>
+                                        <td>fullscreen</td>
+                                        <td>false</td>
+                                        <td>Boolean</td>
+                                        <td>Set true to add a fullscreen icon to the navigation bar when clicked will put your slider in fullscreen</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">19</th>
+                                        <td>fSBackgroundColor</td>
+                                        <td>white</td>
+                                        <td>String</td>
+                                        <td>Sets the fullscreen background color</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">20</th>
+                                        <td>onReady</td>
+                                        <td>function() {}</td>
+                                        <td>Function</td>
+                                        <td>Callback triggers once all images are loaded and ready to render on the screen</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">21</th>
+                                        <td>playSpeed</td>
+                                        <td>100</td>
+                                        <td>Integer</td>
+                                        <td>Value to control the speed (in milliseconds) of play button rotation</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">22</th>
+                                        <td>zeroBased</td>
+                                        <td>false</td>
+                                        <td>Boolean</td>
+                                        <td>Zero based for image filenames starting at 0</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="custom" class="section docs">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="branding medium">
+                                <div class="branding-image"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="instruction">
+                                <h2>Custom Controls</h2>
+                                <p>To use custom navigation put navigation: false, in your 360 options. You can then use the variable you used in the 360 initialisation to trigger the navigation commands via whichever link or button you choose. Just look at the basic example shown below.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                            <div class="threesixty armani">
+                                <div class="spinner">
+                                    <span>0%</span>
+                                </div>
+                                <ol class="threesixty_images"></ol>
+                            </div>
+                            <div class="custom-navigation">
+                                <button type="button" class="btn btn-default btn-raised ripple-dark custom-play">Play</button>
+                                <button type="button" class="btn btn-default btn-raised ripple-dark custom-stop">Stop</button>
+                                <button type="button" class="btn btn-default btn-raised ripple-dark custom-next">Next</button>
+                                <button type="button" class="btn btn-default btn-raised ripple-dark custom-back">Back</button>
+                                <button type="button" class="btn btn-default btn-raised ripple-dark custom-fullscreen">FullScreen</button>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <figure>
+                                <figcaption>JavaScript</figcaption>
+                                <pre id="pre3" class="line-numbers" data-start="1">
+                                <code class="language-javaScript">
+$(document).ready(function() {
+    var armani = $('.armani').ThreeSixty({
+        totalFrames: 12,
+        endFrame: 12,
         currentFrame: 1,
         imgList: '.threesixty_images',
         progress: '.spinner',
-        imagePath:'assets/set1/',
-        filePrefix: '',
+        imagePath:'assets/armani-bag/',
+        filePrefix: 'armani-bag-large-01-',
         ext: '.jpg',
-        width: 670,
-        height: 440,
+        width: 1000,
+        height: 1009,
+        navigation: false,
+        fullscreen: true,
+        responsive: true,
+        disableSpin: false,
+        zeroPadding: true
+    });
+
+    $('.custom-play').on('click touch', function() {
+        armani.play();
+    });
+
+    $('.custom-stop').on('click touch', function() {
+        armani.stop();
+    });
+
+    $('.custom-next').on('click touch', function() {
+        armani.next();
+    });
+
+    $('.custom-back').on('click touch', function() {
+        armani.previous();
+    });
+
+    $('.custom-fullscreen').on('click touch', function() {
+        armani.fullscreen();
+    });
+});
+                                </code>
+                            </pre>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="ajax" class="section docs">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="branding medium">
+                                <div class="branding-image"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="instruction">
+                                <h2>Loading with Ajax</h2>
+                                <p>This is quite simple to do and there are various methods in which you can carry this proceess out. I've opted to show the simplest method possible using jQuery.</p>
+                                <p>Put the normal html snippet in a seperate html page with the correct class alongside your threesixty class. Put your javaScript 360 slider initialization in a function with your options set, and then just call the function at the end of your ajax function.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <figure>
+                                <figcaption>Seperate HTML file</figcaption>
+                                <pre id="pre4" class="line-numbers" data-start="1">
+                                <code class="language-markup">
+&lt;div class="threesixty snow"&gt;
+    &lt;div class="spinner"&gt;&lt;/div&gt;
+    &lt;ol class="threesixty_images"&gt;&lt;/ol&gt;
+&lt;/div>
+                                </code>
+                            </pre>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <figure>
+                                <figcaption>JavaScript Function</figcaption>
+                                <pre id="pre5" class="line-numbers" data-start="1">
+                                <code class="language-javaScript">
+function threeSixtyCall() {
+    var snowfall = $('.snow').ThreeSixty({
+        totalFrames: 46,
+        endFrame: 46,
+        currentFrame: 1,
+        imgList: '.threesixty_images',
+        progress: '.anigif',
+        imagePath: 'assets/snow-2017/',
+        filePrefix: 'SNOW-2017-',
+        ext: '.png',
+        width: 3600,
+        height: 1800,
         navigation: true,
+        position: 'bottom-center',
         fullscreen: true,
         responsive: true,
         disableSpin: false,
         autoplayDirection: -1,
-        zeroPadding: true,
-        theme: 'light'
-        /*totalFrames: 33,
-        endFrame: 33,
-        currentFrame: 1,
-        imgList: '.threesixty_images',
-        progress: '.spinner',
-        imagePath:'assets/hand/',
-        filePrefix: '',
-        ext: '.jpg',
-        width: 500,
-        height: 685,
-        navigation: true,
-        fullscreen: true,
-        responsive: true,
-        disableSpin: false,
-        zeroPadding: false,
-        theme: 'dark'
-        totalFrames: 52,
-        endFrame: 30,
-        currentFrame: 1,
-        imgList: '.threesixty_images',
-        progress: '.spinner',
-        imagePath:'assets/car/',
-        filePrefix: '',
-        ext: '.png',
-        height: 447,
-        width: 1000,
-        navigation: true,
-        fullscreen: true,
-        responsive: true,
-        disableSpin: false,
-        zeroPadding: false,
-        theme: 'dark'*/
-	});
+        zeroPadding: true
+    });
+}
+                                </code>
+                            </pre>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <figure>
+                                <figcaption>JavaScript Ajax Call</figcaption>
+                                <pre id="pre6" class="line-numbers" data-start="1">
+                                <code class="language-javaScript">
+$(document).on('click', 'a.ajaxSnow', function() {
+    $.ajax({
+        method: 'GET',
+        url: 'snow.html',
+        dataType: 'html',
+        success: function(data) {
+            $('.overlay').fadeIn('slow', function() {
+                $('.ajaxLoad').html(data);
+            });
+        },
+        complete: function() {
+            threeSixtyCall();
+        }
+    });
 });
-</script>
+                                </code>
+                            </pre>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="examples" class="section">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="branding medium">
+                                <div class="branding-image"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="instruction">
+                                <h2>More Examples</h2>
+                                <p>Below are a few examples I've prepared to show what can be done. These are all from Gold Medal runs from the Minneapolis X Games 2017 and were produced using FFMpeg. All of these are loaded via ajax so first is the link to the 360 slider and following that is the link to the video clip it was taken from. Just click on the images to view.</p>
+                                <p>These examples were carried out in a different method as there are multiples of more or less the same process, so a short name was used to identify each item and stored in a data attribute on each image link along with the image amount in another. This identity name was used for the directory name, file prefix and element class making it simple to use as a variable to bring 5 initialization calls and 5 on clicks down to 1 function.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="ajaxExample">
+                                <div class="ajaxImage">
+                                    <a class="ajaxSlider" data-selection="bmx-dirt" data-number="44">
+                                        <img src="assets/bmx-dirt/bmx-dirt-01.png" class="responsive" alt="BMX Dirt Slider" />
+                                    </a>
+                                </div>
+                                <div class="ajaxTitle">
+                                    <h4>Trick from BMX Dirt Gold Medal run.</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="ajaxExample">
+                                <div class="ajaxImage">
+                                    <a class="ajaxVideo" data-selection="bmx-dirt">
+                                        <img src="assets/bmx-dirt/bmx-dirt-22.png" class="responsive" alt="BMX Dirt Video" />
+                                    </a>
+                                </div>
+                                <div class="ajaxTime">
+                                    <h4>Time: 00:18 - 00:21 - 44 images</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="ajaxExample">
+                                <div class="ajaxImage">
+                                    <a class="ajaxSlider" data-selection="bmx-vert" data-number="50">
+                                        <img src="assets/bmx-vert/bmx-vert-01.png" class="responsive" alt="BMX Vert Slider" />
+                                    </a>
+                                </div>
+                                <div class="ajaxTitle">
+                                    <h4>Trick from BMX Vert Gold Medal run.</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="ajaxExample">
+                                <div class="ajaxImage">
+                                    <a class="ajaxVideo" data-selection="bmx-vert">
+                                        <img src="assets/bmx-vert/bmx-vert-25.png" class="responsive" alt="BMX Dirt Video" />
+                                    </a>
+                                </div>
+                                <div class="ajaxTime">
+                                     <h4>Time: 00:10 - 00:13 - 50 images</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="ajaxExample">
+                                <div class="ajaxImage">
+                                    <a class="ajaxSlider" data-selection="moto-x-freestyle" data-number="106">
+                                        <img src="assets/moto-x-freestyle/moto-x-freestyle-001.png" class="responsive" alt="Moto X Freestyle Slider" />
+                                    </a>
+                                </div>
+                                <div class="ajaxTitle">
+                                    <h4>Trick from Moto X Freestyle Gold Medal run.</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="ajaxExample">
+                                <div class="ajaxImage">
+                                    <a class="ajaxVideo" data-selection="moto-x-freestyle">
+                                        <img src="assets/moto-x-freestyle/moto-x-freestyle-053.png" class="responsive" alt="Moto X Freestyle Video" />
+                                    </a>
+                                </div>
+                                <div class="ajaxTime">
+                                     <h4>Time: 00:39 - 00:45 - 106 images</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="ajaxExample">
+                                <div class="ajaxImage">
+                                    <a class="ajaxSlider" data-selection="skateboard-street" data-number="66">
+                                        <img src="assets/skateboard-street/skateboard-street-01.png" class="responsive" alt="Skateboard Street Slider" />
+                                    </a>
+                                </div>
+                                <div class="ajaxTitle">
+                                    <h4>Trick from Skateboard Street Gold Medal run.</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="ajaxExample">
+                                <div class="ajaxImage">
+                                    <a class="ajaxVideo" data-selection="skateboard-street">
+                                        <img src="assets/skateboard-street/skateboard-street-33.png" class="responsive" alt="Skateboard Street Video" />
+                                    </a>
+                                </div>
+                                <div class="ajaxTime">
+                                    <h4>Time: 00:39 - 00:45 - 66 images</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="ajaxExample">
+                                <div class="ajaxImage">
+                                    <a class="ajaxSlider" data-selection="skateboard-vert" data-number="47">
+                                        <img src="assets/skateboard-vert/skateboard-vert-01.png" class="responsive" alt="Skateboard Vert Slider" />
+                                    </a>
+                                </div>
+                                <div class="ajaxTitle">
+                                    <h4>Trick from Skateboard Vert Gold Medal run.</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="ajaxExample">
+                                <div class="ajaxImage">
+                                    <a class="ajaxVideo" data-selection="skateboard-vert">
+                                        <img src="assets/skateboard-vert/skateboard-vert-24.png" class="responsive" alt="Skateboard Vert Video" />
+                                    </a>
+                                </div>
+                                <div class="ajaxTime">
+                                    <h4>Time: 00:24 - 00:27 - 47 images</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+<script src="dist/js/vendor/jquery.min.js"></script>
+<script src="dist/js/vendor/bootstrap.bundle.min.js"></script>
+<script src="dist/js/vendor/prism.js"></script>
+<script src="dist/js/vendor/prism-line-numbers.min.js"></script>
+<script src="dist/js/vendor/prism-toolbar.min.js"></script>
+<script src="dist/js/vendor/prism-copy-to-clipboard.min.js"></script>
+<script src="dist/js/vendor/prism-normalize-whitespace.min.js"></script>
+<script src="dist/js/vendor/screenfull.js"></script>
+<script src="dist/js/threesixty.min.js"></script>
+<script src="dist/js/custom.min.js"></script>
 </body>
 </html>
-		
-		

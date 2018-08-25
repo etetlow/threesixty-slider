@@ -1,0 +1,1932 @@
+@-webkit-keyframes slideOutRight {
+  0% {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(40px);
+    -moz-transform: translateX(40px);
+    -ms-transform: translateX(40px);
+    -o-transform: translateX(40px);
+    transform: translateX(40px);
+  }
+}
+
+@-moz-keyframes slideOutRight {
+  0% {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(40px);
+    -moz-transform: translateX(40px);
+    -ms-transform: translateX(40px);
+    -o-transform: translateX(40px);
+    transform: translateX(40px);
+  }
+}
+
+@-ms-keyframes slideOutRight {
+  /* line 210, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_other.scss */
+  0% {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+  }
+  /* line 214, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_other.scss */
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(40px);
+    -moz-transform: translateX(40px);
+    -ms-transform: translateX(40px);
+    -o-transform: translateX(40px);
+    transform: translateX(40px);
+  }
+}
+
+@-o-keyframes slideOutRight {
+  0% {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(40px);
+    -moz-transform: translateX(40px);
+    -ms-transform: translateX(40px);
+    -o-transform: translateX(40px);
+    transform: translateX(40px);
+  }
+}
+
+@keyframes slideOutRight {
+  0% {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(40px);
+    -moz-transform: translateX(40px);
+    -ms-transform: translateX(40px);
+    -o-transform: translateX(40px);
+    transform: translateX(40px);
+  }
+}
+
+@-webkit-keyframes slideInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(40px);
+    -moz-transform: translateX(40px);
+    -ms-transform: translateX(40px);
+    -o-transform: translateX(40px);
+    transform: translateX(40px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@-moz-keyframes slideInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(40px);
+    -moz-transform: translateX(40px);
+    -ms-transform: translateX(40px);
+    -o-transform: translateX(40px);
+    transform: translateX(40px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@-ms-keyframes slideInRight {
+  /* line 231, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_other.scss */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(40px);
+    -moz-transform: translateX(40px);
+    -ms-transform: translateX(40px);
+    -o-transform: translateX(40px);
+    transform: translateX(40px);
+  }
+  /* line 236, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_other.scss */
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@-o-keyframes slideInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(40px);
+    -moz-transform: translateX(40px);
+    -ms-transform: translateX(40px);
+    -o-transform: translateX(40px);
+    transform: translateX(40px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(40px);
+    -moz-transform: translateX(40px);
+    -ms-transform: translateX(40px);
+    -o-transform: translateX(40px);
+    transform: translateX(40px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes ripple {
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(2.5);
+    -moz-transform: scale(2.5);
+    -ms-transform: scale(2.5);
+    -o-transform: scale(2.5);
+    transform: scale(2.5);
+  }
+}
+
+@-moz-keyframes ripple {
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(2.5);
+    -moz-transform: scale(2.5);
+    -ms-transform: scale(2.5);
+    -o-transform: scale(2.5);
+    transform: scale(2.5);
+  }
+}
+
+@-ms-keyframes ripple {
+  /* line 253, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_other.scss */
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(2.5);
+    -moz-transform: scale(2.5);
+    -ms-transform: scale(2.5);
+    -o-transform: scale(2.5);
+    transform: scale(2.5);
+  }
+}
+
+@-o-keyframes ripple {
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(2.5);
+    -moz-transform: scale(2.5);
+    -ms-transform: scale(2.5);
+    -o-transform: scale(2.5);
+    transform: scale(2.5);
+  }
+}
+
+@keyframes ripple {
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(2.5);
+    -moz-transform: scale(2.5);
+    -ms-transform: scale(2.5);
+    -o-transform: scale(2.5);
+    transform: scale(2.5);
+  }
+}
+
+/*----------------------------------------------
+    F O N T S
+------------------------------------------------*/
+@font-face {
+  font-family: "Lato";
+  font-weight: 100;
+  src: url("fonts/Lato-Hairline.woff2") format("woff2"), url("fonts/Lato-Hairline.woff") format("woff"), url("fonts/Lato-Hairline.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Lato";
+  font-weight: 300;
+  src: url("fonts/Lato-Light.woff2") format("woff2"), url("fonts/Lato-Light.woff") format("woff"), url("fonts/Lato-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Lato";
+  font-weight: 400;
+  src: url("fonts/Lato-Regular.woff2") format("woff2"), url("fonts/Lato-Regular.woff") format("woff"), url("fonts/Lato-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Lato";
+  font-weight: 700;
+  src: url("fonts/Lato-Bold.woff2") format("woff2"), url("fonts/Lato-Bold.woff") format("woff"), url("fonts/Lato-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Lato";
+  font-weight: 900;
+  src: url("fonts/Lato-Black.woff2") format("woff2"), url("fonts/Lato-Black.woff") format("woff"), url("fonts/Lato-Black.ttf") format("truetype");
+}
+
+/* line 10, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+html,
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.625rem;
+  -webkit-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background-color: #ACDDED;
+  color: #555;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  height: 100%;
+  text-align: left;
+  overflow: hidden;
+}
+
+/* line 28, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  font-family: Lato;
+  font-weight: 700;
+}
+
+/* line 40, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+h1 {
+  font-size: 2.25rem;
+  line-height: 3.65rem;
+}
+
+/* line 45, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+h2 {
+  font-size: 1.875rem;
+  line-height: 3rem;
+}
+
+/* line 50, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+h3 {
+  font-size: 1.5rem;
+  line-height: 2.4375rem;
+}
+
+/* line 55, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+h4 {
+  font-size: 1.125rem;
+  line-height: 1.83rem;
+}
+
+/* line 60, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+h5 {
+  font-size: 0.875rem;
+  line-height: 1.42rem;
+}
+
+/* line 65, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+h6 {
+  font-size: 0.75rem;
+  line-height: 1.22rem;
+}
+
+/* line 70, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* line 75, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+a,
+a:visited {
+  text-decoration: none;
+  color: #666;
+}
+
+/* line 79, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+a:focus, a:hover,
+a:visited:focus,
+a:visited:hover {
+  color: #CCC;
+  text-decoration: none;
+}
+
+/* line 86, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+code[class*="language-"],
+pre[class*="language-"] {
+  font-family: monospace, monospace;
+}
+
+/* line 91, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+pre {
+  overflow: hidden;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* line 96, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+pre > code {
+  display: block;
+  word-wrap: none;
+}
+
+/* line 101, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+.overlay {
+  position: absolute;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  height: 100%;
+  z-index: 21;
+}
+
+/* line 108, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+.overlay .close {
+  color: #fff;
+  opacity: .5;
+  font-family: Arial Black;
+  font-size: 1.5rem;
+  margin: 10px;
+  cursor: pointer;
+}
+
+/* line 115, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+.overlay .close:hover {
+  opacity: .9;
+}
+
+/* line 119, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+.overlay .anigif {
+  width: 120px;
+  height: 120px;
+  margin: auto;
+}
+
+/* line 124, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+.overlay .ajaxLoad {
+  position: absolute;
+  max-width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* line 133, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0);
+  margin-left: calc(100% - 40px);
+  z-index: 4;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  -ms-transition: all .5s ease-in-out;
+}
+
+/* line 144, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+nav.menushow {
+  margin: 0;
+  z-index: 5;
+  background: white;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  -ms-transition: all .5s ease-in-out;
+}
+
+/* line 152, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+nav .big-menu {
+  width: 100%;
+  float: right;
+}
+
+/* line 155, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+nav .big-menu ul.nav-links {
+  margin-top: 20%;
+  width: 100%;
+  font-family: Lato;
+  font-weight: 700;
+  font-size: 2rem;
+  list-style: none;
+  padding-left: none;
+  -webkit-padding-start: 0px;
+  text-align: center;
+}
+
+/* line 165, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+nav .big-menu ul.nav-links > li {
+  display: inline-block;
+  width: 24%;
+  vertical-align: top;
+}
+
+/* line 169, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+nav .big-menu ul.nav-links > li > a,
+nav .big-menu ul.nav-links > li > a:visited {
+  color: rgba(0, 0, 0, 0.4);
+  text-decoration: none;
+}
+
+/* line 173, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+nav .big-menu ul.nav-links > li > a:hover, nav .big-menu ul.nav-links > li > a:focus, nav .big-menu ul.nav-links > li > a.active,
+nav .big-menu ul.nav-links > li > a:visited:hover,
+nav .big-menu ul.nav-links > li > a:visited:focus,
+nav .big-menu ul.nav-links > li > a:visited.active {
+  background: none;
+  color: rgba(0, 0, 0, 0.8);
+  text-decoration: none;
+}
+
+/* line 182, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+nav .big-menu ul.nav-links > li.expanded ul li {
+  float: none;
+  display: block;
+  padding: 0;
+  margin: 20px auto 0;
+  font-size: 1.3rem;
+  font-weight: 400;
+  width: 80%;
+}
+
+/* line 190, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+nav .big-menu ul.nav-links > li.expanded ul li > a,
+nav .big-menu ul.nav-links > li.expanded ul li > a:visited {
+  color: rgba(0, 0, 0, 0.4);
+  text-decoration: none;
+}
+
+/* line 194, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+nav .big-menu ul.nav-links > li.expanded ul li > a:hover, nav .big-menu ul.nav-links > li.expanded ul li > a:focus, nav .big-menu ul.nav-links > li.expanded ul li > a.active,
+nav .big-menu ul.nav-links > li.expanded ul li > a:visited:hover,
+nav .big-menu ul.nav-links > li.expanded ul li > a:visited:focus,
+nav .big-menu ul.nav-links > li.expanded ul li > a:visited.active {
+  background: none;
+  color: rgba(0, 0, 0, 0.8);
+  text-decoration: none;
+}
+
+/* line 206, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+nav .big-menu .branding {
+  position: absolute;
+  width: 274px;
+  height: 274px;
+  background: transparent url("../img/fullLogo@274.png") no-repeat 50% 50%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* line 215, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+nav .big-menu .slim-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 100%;
+}
+
+/* line 221, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+nav .big-menu .slim-menu .slim-links {
+  position: absolute;
+  list-style: none;
+  top: 50%;
+  left: 13px;
+  transform: translate(0, -50%);
+}
+
+/* line 227, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+nav .big-menu .slim-menu .slim-links li {
+  position: relative;
+}
+
+/* line 229, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+nav .big-menu .slim-menu .slim-links li a,
+nav .big-menu .slim-menu .slim-links li a:visited {
+  content: '';
+  width: 8px;
+  height: 8px;
+  margin: 15px auto;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  color: rgba(255, 255, 255, 0);
+  transition: all 0.5s ease-out;
+  display: block;
+}
+
+/* line 241, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+nav .big-menu .slim-menu .slim-links li a:hover,
+nav .big-menu .slim-menu .slim-links li a:visited:hover {
+  content: '';
+  width: 12px;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.7);
+  color: white;
+  transition: all 0.5s ease-in;
+}
+
+/* line 249, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+nav .big-menu .slim-menu .slim-links li a.active,
+nav .big-menu .slim-menu .slim-links li a:visited.active {
+  content: '';
+  width: 14px;
+  height: 14px;
+  background: white;
+  color: white;
+  transition: all 0.5s ease-in;
+}
+
+/* line 261, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+nav .big-menu .slim-menu.slideOutRight li:nth-child(1) a {
+  -webkit-animation-name: slideOutRight;
+  -moz-animation-name: slideOutRight;
+  -ms-animation-name: slideOutRight;
+  -o-animation-name: slideOutRight;
+  animation-name: slideOutRight;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -ms-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-duration: 0.25s;
+  -moz-animation-duration: 0.25s;
+  -ms-animation-duration: 0.25s;
+  -o-animation-duration: 0.25s;
+  animation-duration: 0.25s;
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  -ms-animation-delay: 0s;
+  -o-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-timing-function: ease-in-out;
+  -ms-animation-timing-function: ease-in-out;
+  -o-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -ms-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-backface-visibility: visible;
+  -moz-backface-visibility: visible;
+  -ms-backface-visibility: visible;
+  -o-backface-visibility: visible;
+  backface-visibility: visible;
+}
+
+/* line 269, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+nav .big-menu .slim-menu.slideOutRight li:nth-child(2) a {
+  -webkit-animation-name: slideOutRight;
+  -moz-animation-name: slideOutRight;
+  -ms-animation-name: slideOutRight;
+  -o-animation-name: slideOutRight;
+  animation-name: slideOutRight;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -ms-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-duration: 0.25s;
+  -moz-animation-duration: 0.25s;
+  -ms-animation-duration: 0.25s;
+  -o-animation-duration: 0.25s;
+  animation-duration: 0.25s;
+  -webkit-animation-delay: 0.125s;
+  -moz-animation-delay: 0.125s;
+  -ms-animation-delay: 0.125s;
+  -o-animation-delay: 0.125s;
+  animation-delay: 0.125s;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-timing-function: ease-in-out;
+  -ms-animation-timing-function: ease-in-out;
+  -o-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -ms-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-backface-visibility: visible;
+  -moz-backface-visibility: visible;
+  -ms-backface-visibility: visible;
+  -o-backface-visibility: visible;
+  backface-visibility: visible;
+}
+
+/* line 277, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+nav .big-menu .slim-menu.slideOutRight li:nth-child(3) a {
+  -webkit-animation-name: slideOutRight;
+  -moz-animation-name: slideOutRight;
+  -ms-animation-name: slideOutRight;
+  -o-animation-name: slideOutRight;
+  animation-name: slideOutRight;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -ms-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-duration: 0.25s;
+  -moz-animation-duration: 0.25s;
+  -ms-animation-duration: 0.25s;
+  -o-animation-duration: 0.25s;
+  animation-duration: 0.25s;
+  -webkit-animation-delay: 0.25s;
+  -moz-animation-delay: 0.25s;
+  -ms-animation-delay: 0.25s;
+  -o-animation-delay: 0.25s;
+  animation-delay: 0.25s;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-timing-function: ease-in-out;
+  -ms-animation-timing-function: ease-in-out;
+  -o-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -ms-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-backface-visibility: visible;
+  -moz-backface-visibility: visible;
+  -ms-backface-visibility: visible;
+  -o-backface-visibility: visible;
+  backface-visibility: visible;
+}
+
+/* line 285, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+nav .big-menu .slim-menu.slideOutRight li:nth-child(4) a {
+  -webkit-animation-name: slideOutRight;
+  -moz-animation-name: slideOutRight;
+  -ms-animation-name: slideOutRight;
+  -o-animation-name: slideOutRight;
+  animation-name: slideOutRight;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -ms-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-duration: 0.25s;
+  -moz-animation-duration: 0.25s;
+  -ms-animation-duration: 0.25s;
+  -o-animation-duration: 0.25s;
+  animation-duration: 0.25s;
+  -webkit-animation-delay: 0.375s;
+  -moz-animation-delay: 0.375s;
+  -ms-animation-delay: 0.375s;
+  -o-animation-delay: 0.375s;
+  animation-delay: 0.375s;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-timing-function: ease-in-out;
+  -ms-animation-timing-function: ease-in-out;
+  -o-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -ms-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-backface-visibility: visible;
+  -moz-backface-visibility: visible;
+  -ms-backface-visibility: visible;
+  -o-backface-visibility: visible;
+  backface-visibility: visible;
+}
+
+/* line 293, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+nav .big-menu .slim-menu.slideOutRight li:nth-child(5) a {
+  -webkit-animation-name: slideOutRight;
+  -moz-animation-name: slideOutRight;
+  -ms-animation-name: slideOutRight;
+  -o-animation-name: slideOutRight;
+  animation-name: slideOutRight;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -ms-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-duration: 0.25s;
+  -moz-animation-duration: 0.25s;
+  -ms-animation-duration: 0.25s;
+  -o-animation-duration: 0.25s;
+  animation-duration: 0.25s;
+  -webkit-animation-delay: 0.5s;
+  -moz-animation-delay: 0.5s;
+  -ms-animation-delay: 0.5s;
+  -o-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-timing-function: ease-in-out;
+  -ms-animation-timing-function: ease-in-out;
+  -o-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -ms-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-backface-visibility: visible;
+  -moz-backface-visibility: visible;
+  -ms-backface-visibility: visible;
+  -o-backface-visibility: visible;
+  backface-visibility: visible;
+}
+
+/* line 301, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+nav .big-menu .slim-menu.slideOutRight li:nth-child(6) a {
+  -webkit-animation-name: slideOutRight;
+  -moz-animation-name: slideOutRight;
+  -ms-animation-name: slideOutRight;
+  -o-animation-name: slideOutRight;
+  animation-name: slideOutRight;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -ms-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-duration: 0.25s;
+  -moz-animation-duration: 0.25s;
+  -ms-animation-duration: 0.25s;
+  -o-animation-duration: 0.25s;
+  animation-duration: 0.25s;
+  -webkit-animation-delay: 0.625s;
+  -moz-animation-delay: 0.625s;
+  -ms-animation-delay: 0.625s;
+  -o-animation-delay: 0.625s;
+  animation-delay: 0.625s;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-timing-function: ease-in-out;
+  -ms-animation-timing-function: ease-in-out;
+  -o-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -ms-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-backface-visibility: visible;
+  -moz-backface-visibility: visible;
+  -ms-backface-visibility: visible;
+  -o-backface-visibility: visible;
+  backface-visibility: visible;
+}
+
+/* line 309, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+nav .big-menu .slim-menu.slideOutRight li:nth-child(7) a {
+  -webkit-animation-name: slideOutRight;
+  -moz-animation-name: slideOutRight;
+  -ms-animation-name: slideOutRight;
+  -o-animation-name: slideOutRight;
+  animation-name: slideOutRight;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -ms-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-duration: 0.25s;
+  -moz-animation-duration: 0.25s;
+  -ms-animation-duration: 0.25s;
+  -o-animation-duration: 0.25s;
+  animation-duration: 0.25s;
+  -webkit-animation-delay: 0.75s;
+  -moz-animation-delay: 0.75s;
+  -ms-animation-delay: 0.75s;
+  -o-animation-delay: 0.75s;
+  animation-delay: 0.75s;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-timing-function: ease-in-out;
+  -ms-animation-timing-function: ease-in-out;
+  -o-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -ms-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-backface-visibility: visible;
+  -moz-backface-visibility: visible;
+  -ms-backface-visibility: visible;
+  -o-backface-visibility: visible;
+  backface-visibility: visible;
+}
+
+/* line 319, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+nav .big-menu .slim-menu.slideInRight li:nth-child(1) a {
+  -webkit-animation-name: slideInRight;
+  -moz-animation-name: slideInRight;
+  -ms-animation-name: slideInRight;
+  -o-animation-name: slideInRight;
+  animation-name: slideInRight;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -ms-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-duration: 0.25s;
+  -moz-animation-duration: 0.25s;
+  -ms-animation-duration: 0.25s;
+  -o-animation-duration: 0.25s;
+  animation-duration: 0.25s;
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  -ms-animation-delay: 0s;
+  -o-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-timing-function: ease-in-out;
+  -ms-animation-timing-function: ease-in-out;
+  -o-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -ms-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-backface-visibility: visible;
+  -moz-backface-visibility: visible;
+  -ms-backface-visibility: visible;
+  -o-backface-visibility: visible;
+  backface-visibility: visible;
+}
+
+/* line 327, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+nav .big-menu .slim-menu.slideInRight li:nth-child(2) a {
+  -webkit-animation-name: slideInRight;
+  -moz-animation-name: slideInRight;
+  -ms-animation-name: slideInRight;
+  -o-animation-name: slideInRight;
+  animation-name: slideInRight;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -ms-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-duration: 0.25s;
+  -moz-animation-duration: 0.25s;
+  -ms-animation-duration: 0.25s;
+  -o-animation-duration: 0.25s;
+  animation-duration: 0.25s;
+  -webkit-animation-delay: 0.125s;
+  -moz-animation-delay: 0.125s;
+  -ms-animation-delay: 0.125s;
+  -o-animation-delay: 0.125s;
+  animation-delay: 0.125s;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-timing-function: ease-in-out;
+  -ms-animation-timing-function: ease-in-out;
+  -o-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -ms-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-backface-visibility: visible;
+  -moz-backface-visibility: visible;
+  -ms-backface-visibility: visible;
+  -o-backface-visibility: visible;
+  backface-visibility: visible;
+}
+
+/* line 335, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+nav .big-menu .slim-menu.slideInRight li:nth-child(3) a {
+  -webkit-animation-name: slideInRight;
+  -moz-animation-name: slideInRight;
+  -ms-animation-name: slideInRight;
+  -o-animation-name: slideInRight;
+  animation-name: slideInRight;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -ms-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-duration: 0.25s;
+  -moz-animation-duration: 0.25s;
+  -ms-animation-duration: 0.25s;
+  -o-animation-duration: 0.25s;
+  animation-duration: 0.25s;
+  -webkit-animation-delay: 0.25s;
+  -moz-animation-delay: 0.25s;
+  -ms-animation-delay: 0.25s;
+  -o-animation-delay: 0.25s;
+  animation-delay: 0.25s;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-timing-function: ease-in-out;
+  -ms-animation-timing-function: ease-in-out;
+  -o-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -ms-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-backface-visibility: visible;
+  -moz-backface-visibility: visible;
+  -ms-backface-visibility: visible;
+  -o-backface-visibility: visible;
+  backface-visibility: visible;
+}
+
+/* line 343, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+nav .big-menu .slim-menu.slideInRight li:nth-child(4) a {
+  -webkit-animation-name: slideInRight;
+  -moz-animation-name: slideInRight;
+  -ms-animation-name: slideInRight;
+  -o-animation-name: slideInRight;
+  animation-name: slideInRight;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -ms-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-duration: 0.25s;
+  -moz-animation-duration: 0.25s;
+  -ms-animation-duration: 0.25s;
+  -o-animation-duration: 0.25s;
+  animation-duration: 0.25s;
+  -webkit-animation-delay: 0.375s;
+  -moz-animation-delay: 0.375s;
+  -ms-animation-delay: 0.375s;
+  -o-animation-delay: 0.375s;
+  animation-delay: 0.375s;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-timing-function: ease-in-out;
+  -ms-animation-timing-function: ease-in-out;
+  -o-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -ms-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-backface-visibility: visible;
+  -moz-backface-visibility: visible;
+  -ms-backface-visibility: visible;
+  -o-backface-visibility: visible;
+  backface-visibility: visible;
+}
+
+/* line 351, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+nav .big-menu .slim-menu.slideInRight li:nth-child(5) a {
+  -webkit-animation-name: slideInRight;
+  -moz-animation-name: slideInRight;
+  -ms-animation-name: slideInRight;
+  -o-animation-name: slideInRight;
+  animation-name: slideInRight;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -ms-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-duration: 0.25s;
+  -moz-animation-duration: 0.25s;
+  -ms-animation-duration: 0.25s;
+  -o-animation-duration: 0.25s;
+  animation-duration: 0.25s;
+  -webkit-animation-delay: 0.5s;
+  -moz-animation-delay: 0.5s;
+  -ms-animation-delay: 0.5s;
+  -o-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-timing-function: ease-in-out;
+  -ms-animation-timing-function: ease-in-out;
+  -o-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -ms-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-backface-visibility: visible;
+  -moz-backface-visibility: visible;
+  -ms-backface-visibility: visible;
+  -o-backface-visibility: visible;
+  backface-visibility: visible;
+}
+
+/* line 359, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+nav .big-menu .slim-menu.slideInRight li:nth-child(6) a {
+  -webkit-animation-name: slideInRight;
+  -moz-animation-name: slideInRight;
+  -ms-animation-name: slideInRight;
+  -o-animation-name: slideInRight;
+  animation-name: slideInRight;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -ms-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-duration: 0.25s;
+  -moz-animation-duration: 0.25s;
+  -ms-animation-duration: 0.25s;
+  -o-animation-duration: 0.25s;
+  animation-duration: 0.25s;
+  -webkit-animation-delay: 0.625s;
+  -moz-animation-delay: 0.625s;
+  -ms-animation-delay: 0.625s;
+  -o-animation-delay: 0.625s;
+  animation-delay: 0.625s;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-timing-function: ease-in-out;
+  -ms-animation-timing-function: ease-in-out;
+  -o-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -ms-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-backface-visibility: visible;
+  -moz-backface-visibility: visible;
+  -ms-backface-visibility: visible;
+  -o-backface-visibility: visible;
+  backface-visibility: visible;
+}
+
+/* line 367, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+nav .big-menu .slim-menu.slideInRight li:nth-child(7) a {
+  -webkit-animation-name: slideInRight;
+  -moz-animation-name: slideInRight;
+  -ms-animation-name: slideInRight;
+  -o-animation-name: slideInRight;
+  animation-name: slideInRight;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -ms-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-duration: 0.25s;
+  -moz-animation-duration: 0.25s;
+  -ms-animation-duration: 0.25s;
+  -o-animation-duration: 0.25s;
+  animation-duration: 0.25s;
+  -webkit-animation-delay: 0.75s;
+  -moz-animation-delay: 0.75s;
+  -ms-animation-delay: 0.75s;
+  -o-animation-delay: 0.75s;
+  animation-delay: 0.75s;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-timing-function: ease-in-out;
+  -ms-animation-timing-function: ease-in-out;
+  -o-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -ms-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-backface-visibility: visible;
+  -moz-backface-visibility: visible;
+  -ms-backface-visibility: visible;
+  -o-backface-visibility: visible;
+  backface-visibility: visible;
+}
+
+/* line 377, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+nav .big-menu .menu-btn {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  z-index: 6;
+  right: 0;
+  top: 10px;
+}
+
+/* line 384, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+nav .big-menu .menu-btn a {
+  width: 30px;
+  height: 30px;
+  padding: 3px;
+}
+
+/* line 388, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+nav .big-menu .menu-btn a .hamburger {
+  height: 24px;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: .15s;
+  transition-timing-function: linear;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+}
+
+/* line 400, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+nav .big-menu .menu-btn a .hamburger .hamburger-box {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+}
+
+/* line 405, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+nav .big-menu .menu-btn a .hamburger .hamburger-box .hamburger-inner {
+  display: block;
+  margin-top: 11px;
+}
+
+/* line 408, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+nav .big-menu .menu-btn a .hamburger .hamburger-box .hamburger-inner::after {
+  bottom: -8px;
+}
+
+/* line 411, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+nav .big-menu .menu-btn a .hamburger .hamburger-box .hamburger-inner::before {
+  top: -8px;
+}
+
+/* line 414, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+nav .big-menu .menu-btn a .hamburger .hamburger-box .hamburger-inner:after, nav .big-menu .menu-btn a .hamburger .hamburger-box .hamburger-inner::before {
+  content: "";
+  display: block;
+}
+
+/* line 420, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+nav .big-menu .menu-btn a .hamburger .hamburger-box .hamburger-inner,
+nav .big-menu .menu-btn a .hamburger .hamburger-box .hamburger-inner::after,
+nav .big-menu .menu-btn a .hamburger .hamburger-box .hamburger-inner::before {
+  width: 24px;
+  height: 2px;
+  background-color: #666;
+  border-radius: 2px;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: .15s;
+  transition-timing-function: ease;
+  box-shadow: 0 1px 5px rgba(255, 255, 255, 0.3);
+}
+
+/* line 434, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+nav .big-menu .menu-btn a .hamburger.hamburger--spin .hamburger-inner {
+  transition-duration: .22s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+/* line 437, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+nav .big-menu .menu-btn a .hamburger.hamburger--spin .hamburger-inner::before {
+  transition: top .1s .25s ease-in, opacity .1s ease-in;
+}
+
+/* line 440, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+nav .big-menu .menu-btn a .hamburger.hamburger--spin .hamburger-inner::after {
+  transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+/* line 444, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+nav .big-menu .menu-btn a .hamburger.hamburger--spin.is-active .hamburger-inner {
+  transform: rotate(225deg);
+  transition-delay: .12s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+/* line 448, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+nav .big-menu .menu-btn a .hamburger.hamburger--spin.is-active .hamburger-inner::before {
+  top: 0;
+  opacity: 0;
+  transition: top .1s ease-out, opacity .1s .12s ease-out;
+}
+
+/* line 453, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+nav .big-menu .menu-btn a .hamburger.hamburger--spin.is-active .hamburger-inner::after {
+  bottom: 0;
+  transform: rotate(-90deg);
+  transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+/* line 462, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+nav .big-menu .toggleNavDots {
+  position: fixed;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  bottom: -40px;
+  right: -40px;
+  background-color: white;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* line 471, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+nav .big-menu .toggleNavDots .ripple-effect {
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+}
+
+/* line 476, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+nav .big-menu .toggleNavDots .ink {
+  display: block;
+  position: absolute;
+  pointer-events: none;
+  border-radius: 50%;
+  transform: scale(0);
+  background: #fff;
+  opacity: 1;
+}
+
+/* line 486, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+nav .big-menu .toggleNavDots .ink.animate {
+  -webkit-animation-name: ripple;
+  -moz-animation-name: ripple;
+  -ms-animation-name: ripple;
+  -o-animation-name: ripple;
+  animation-name: ripple;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -ms-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-duration: 0.5s;
+  -moz-animation-duration: 0.5s;
+  -ms-animation-duration: 0.5s;
+  -o-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  -ms-animation-delay: 0s;
+  -o-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -ms-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* line 492, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+nav .big-menu .toggleNavDots span.glyphicon {
+  cursor: pointer;
+  position: fixed;
+  top: auto;
+  bottom: 8px;
+  right: 5px;
+  transition: all .5s ease-in-out;
+}
+
+/* line 504, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+main,
+.sections {
+  height: 100%;
+  position: relative;
+}
+
+/*--------------------------------------------
+    P E R F E C T - S C R O L L B A R
+----------------------------------------------*/
+/* line 515, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+.ps {
+  overflow: hidden !important;
+  overflow-anchor: none;
+  -ms-overflow-style: none;
+  touch-action: auto;
+  -ms-touch-action: auto;
+}
+
+/* line 521, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+.ps .ps__rail-x,
+.ps .ps__rail-y {
+  display: none;
+  opacity: 0;
+  transition: background-color .2s linear, opacity .2s linear;
+  -webkit-transition: background-color .2s linear, opacity .2s linear;
+  position: absolute;
+}
+
+/* line 529, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+.ps .ps__rail-x {
+  height: 15px;
+  bottom: 0;
+}
+
+/* line 533, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+.ps .ps__rail-y {
+  width: 15px;
+  right: 0;
+}
+
+/* line 537, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+.ps.ps--active-x > .ps__rail-x,
+.ps.ps--active-y > .ps__rail-y {
+  display: block;
+  background-color: transparent;
+}
+
+/* line 542, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+.ps:hover > .ps__rail-x,
+.ps:hover > .ps__rail-y,
+.ps.ps--focus > .ps__rail-x,
+.ps.ps--focus > .ps__rail-y,
+.ps.ps--scrolling-x > .ps__rail-x,
+.ps.ps--scrolling-y > .ps__rail-y {
+  opacity: 0.6;
+}
+
+/* line 550, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+.ps.ps__rail-x:hover, .ps.ps__rail-y:hover, .ps.ps__rail-x:focus, .ps.ps__rail-y:focus, .ps.ps__rail-x.ps--clicking, .ps.ps__rail-y.ps--clicking {
+  background-color: #eee;
+  opacity: 0.9;
+}
+
+/* line 559, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+.ps .ps__thumb-x,
+.ps .ps__thumb-y {
+  background-color: #aaa;
+  border-radius: 6px;
+  transition: background-color .2s linear, height .2s ease-in-out;
+  -webkit-transition: background-color .2s linear, height .2s ease-in-out;
+  position: absolute;
+}
+
+/* line 567, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+.ps .ps__thumb-x {
+  bottom: 2px;
+  height: 6px;
+}
+
+/* line 571, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+.ps .ps__thumb-y {
+  right: 2px;
+  width: 6px;
+}
+
+/* line 575, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+.ps .ps__rail-x:hover > .ps__thumb-x,
+.ps .ps__rail-x:focus > .ps__thumb-x,
+.ps .ps__rail-x.ps--clicking .ps__thumb-x,
+.ps .ps__rail-y:hover > .ps__thumb-y,
+.ps .ps__rail-y:focus > .ps__thumb-y,
+.ps .ps__rail-y.ps--clicking .ps__thumb-y {
+  background-color: #999;
+  width: 11px;
+}
+
+/* line 584, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+.ps.section {
+  padding-bottom: 50px;
+}
+
+/* MS supports */
+@supports (-ms-overflow-style: none) {
+  /* line 593, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+  .ps {
+    overflow: auto !important;
+  }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  /* line 600, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+  .ps {
+    overflow: auto !important;
+  }
+}
+
+/* line 606, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+section.section {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  height: 100%;
+  position: relative;
+  background-color: #ACDDED;
+  overflow: hidden;
+}
+
+/* line 613, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+section.section .branding {
+  position: relative;
+}
+
+/* line 615, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+section.section .branding.large {
+  width: 274px;
+  height: 274px;
+  background: transparent url("../img/fullLogo@274.png") no-repeat center center;
+}
+
+/* line 620, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+section.section .branding.medium {
+  position: absolute;
+  top: 0;
+  left: 15px;
+  width: 176px;
+  height: 176px;
+  background: transparent url("../img/fullLogo@176.png") no-repeat center center;
+}
+
+/* line 628, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+section.section .branding.small {
+  width: 100px;
+  height: 100px;
+  background: transparent url("../img/fullLogo@100.png") no-repeat center center;
+}
+
+/* line 634, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+section.section .instruction {
+  margin-top: 40px;
+}
+
+/* line 638, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+section.section table thead {
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* line 642, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+section.section table tbody {
+  border-top: 1px solid rgba(0, 0, 0, 0.7);
+  font-size: 0.875rem;
+}
+
+/* line 646, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+section.section table.table-striped > tbody > tr:nth-of-type(odd) {
+  border-radius: 4px;
+}
+
+/* line 652, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+section.section#features .feature-item {
+  margin: 40px 15px 0;
+}
+
+/* line 654, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+section.section#features .feature-item .feature-image {
+  padding: 35px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* line 659, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+section.section#features .feature-item .feature-title {
+  text-align: center;
+}
+
+/* line 662, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+section.section#features .feature-item .feature-desc {
+  font-size: 0.875rem;
+  line-height: 1.42rem;
+  text-align: center;
+}
+
+/* line 672, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+section.section#custom .btn:focus,
+section.section#custom .btn.focus,
+section.section#custom .btn.active:focus,
+section.section#custom .btn.active.focus,
+section.section#custom .btn:active.focus,
+section.section#custom .btn:active:focus,
+section.section#custom .btn-default:focus,
+section.section#custom .btn-default.focus {
+  outline: none;
+}
+
+/* line 682, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+section.section#custom .btn-raised {
+  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
+}
+
+/* line 687, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+section.section#custom .btn-raised:active, section.section#custom .btn-raised.active, section.section#custom .btn-raised:active:focus, section.section#custom .btn-raised.active:focus, section.section#custom .btn-raised:focus {
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+/* line 698, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+section.section#custom .ripple-effect {
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+}
+
+/* line 703, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+section.section#custom .ink {
+  display: block;
+  position: absolute;
+  pointer-events: none;
+  border-radius: 50%;
+  transform: scale(0);
+  background: #fff;
+  opacity: 1;
+}
+
+/* line 713, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+section.section#custom .ink.animate {
+  -webkit-animation-name: ripple;
+  -moz-animation-name: ripple;
+  -ms-animation-name: ripple;
+  -o-animation-name: ripple;
+  animation-name: ripple;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -ms-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-duration: 0.5s;
+  -moz-animation-duration: 0.5s;
+  -ms-animation-duration: 0.5s;
+  -o-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  -ms-animation-delay: 0s;
+  -o-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -ms-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* line 719, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+section.section#custom .armani {
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  margin-top: 33px;
+}
+
+/* line 724, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+section.section#custom .custom-navigation {
+  margin: 15px auto;
+  text-align: center;
+}
+
+/* line 90, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_other.scss */
+section.section#examples .ajaxImage .ajaxJupiter img:before {
+  content: "";
+  display: block;
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+}
+
+/* line 90, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_other.scss */
+section.section#examples .ajaxImage .ajaxRadiation img:before {
+  content: "";
+  display: block;
+  position: relative;
+  width: 100%;
+  padding-top: 50%;
+}
+
+/* line 90, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_other.scss */
+section.section#examples .ajaxImage .ajaxSnow img:before {
+  content: "";
+  display: block;
+  position: relative;
+  width: 100%;
+  padding-top: 50%;
+}
+
+/* line 90, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_other.scss */
+section.section#examples .ajaxImage .ajaxRodneyMullen img:before {
+  content: "";
+  display: block;
+  position: relative;
+  width: 100%;
+  padding-top: 65.67164%;
+}
+
+/* line 752, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+section.section#examples .ajaxImage .responsive {
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  transition: all 0.5s ease-out;
+}
+
+/* line 755, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_site.scss */
+section.section#examples .ajaxImage .responsive:hover {
+  transform: scale(1.05);
+  box-shadow: 0 3px 8px 2px rgba(0, 0, 0, 0.7);
+  transition: all 0.5s ease-in;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1199px) and (orientation: portrait) {
+  /* line 2, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_mqueries.scss */
+  nav .big-menu ul.nav-links {
+    margin-top: 40%;
+  }
+  /* line 5, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_mqueries.scss */
+  .threesixty {
+    margin-top: 200px;
+  }
+  /* line 10, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_mqueries.scss */
+  section.section .branding.large, section.section .branding.medium {
+    position: relative;
+    float: none;
+    margin: 0 auto 0 auto;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) and (min-height: 500px) and (orientation: landscape) {
+  /* line 21, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_mqueries.scss */
+  html, body {
+    font-size: 12px;
+  }
+  /* line 24, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_mqueries.scss */
+  nav .big-menu ul.nav-links {
+    margin-top: 35%;
+  }
+  /* line 28, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_mqueries.scss */
+  section.section .branding {
+    float: left;
+  }
+  /* line 30, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_mqueries.scss */
+  section.section .branding.large {
+    width: 176px;
+    height: 176px;
+    background: transparent url("../img/fullLogo@176.png") no-repeat center center;
+  }
+  /* line 35, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_mqueries.scss */
+  section.section .branding.medium {
+    width: 100px;
+    height: 100px;
+    top: 10px;
+    left: 10px;
+    background: transparent url("../img/fullLogo@100.png") no-repeat center center;
+  }
+  /* line 43, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_mqueries.scss */
+  section.section .instruction {
+    margin-top: 10px;
+  }
+  /* line 47, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_mqueries.scss */
+  section.section#features .feature-item {
+    margin: 15px 15px 0;
+  }
+  /* line 49, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_mqueries.scss */
+  section.section#features .feature-item .feature-image {
+    padding: 20px 35px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) and (max-height: 499px) and (orientation: landscape) {
+  /* line 58, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_mqueries.scss */
+  html, body {
+    font-size: 10px;
+  }
+  /* line 62, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_mqueries.scss */
+  section.section .branding {
+    float: left;
+  }
+  /* line 64, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_mqueries.scss */
+  section.section .branding.large {
+    width: 176px;
+    height: 176px;
+    background: transparent url("../img/fullLogo@176.png") no-repeat center center;
+  }
+  /* line 69, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_mqueries.scss */
+  section.section .branding.medium {
+    width: 100px;
+    height: 100px;
+    background: transparent url("../img/fullLogo@100.png") no-repeat center center;
+  }
+}
+
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+  /* line 79, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_mqueries.scss */
+  html, body {
+    font-size: 12px;
+  }
+  /* line 83, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_mqueries.scss */
+  section.section .branding {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  /* line 88, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_mqueries.scss */
+  section.section .branding.large {
+    width: 200px;
+    height: 200px;
+    background: transparent url("../img/fullLogo@100x2.png") no-repeat center center;
+  }
+  /* line 93, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_mqueries.scss */
+  section.section .branding.medium {
+    width: 100px;
+    height: 100px;
+    background: transparent url("../img/fullLogo@100.png") no-repeat center center;
+  }
+  /* line 99, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_mqueries.scss */
+  section.section .instruction {
+    margin-top: 125px;
+  }
+  /* line 102, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_mqueries.scss */
+  section.section .threesixty {
+    margin: 150px auto 0;
+  }
+  /* line 106, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_mqueries.scss */
+  section.section#features .feature-item {
+    height: 205px;
+    margin: 15px;
+  }
+  /* line 109, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_mqueries.scss */
+  section.section#features .feature-item .feature-image {
+    padding: 10px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  /* line 114, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_mqueries.scss */
+  section.section#features .feature-item .feature-title {
+    text-align: center;
+  }
+  /* line 117, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_mqueries.scss */
+  section.section#features .feature-item .feature-desc {
+    font-size: 0.875rem;
+    line-height: 1.42rem;
+    text-align: center;
+  }
+  /* line 124, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_mqueries.scss */
+  section.section#default, section.section#custom, section.section#ajax {
+    padding-bottom: 75px;
+  }
+  /* line 131, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_mqueries.scss */
+  section.section#custom.armani .custom-navigation {
+    margin: 15px auto;
+    text-align: center;
+  }
+  /* line 138, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_mqueries.scss */
+  nav .big-menu {
+    width: 100%;
+    float: right;
+  }
+  /* line 141, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_mqueries.scss */
+  nav .big-menu ul.nav-links {
+    margin: 240px auto 0;
+    width: 100%;
+    font-family: Lato;
+    font-weight: 700;
+    font-size: 1.4rem;
+    list-style: none;
+    padding-left: none;
+    -webkit-padding-start: 0px;
+    text-align: center;
+  }
+  /* line 151, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_mqueries.scss */
+  nav .big-menu ul.nav-links > li {
+    display: block;
+    width: 100%;
+    vertical-align: top;
+    margin-top: 15px;
+  }
+  /* line 156, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_mqueries.scss */
+  nav .big-menu ul.nav-links > li > a,
+  nav .big-menu ul.nav-links > li > a:visited {
+    color: rgba(0, 0, 0, 0.4);
+    text-decoration: none;
+  }
+  /* line 160, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_mqueries.scss */
+  nav .big-menu ul.nav-links > li > a:hover, nav .big-menu ul.nav-links > li > a:focus, nav .big-menu ul.nav-links > li > a.active,
+  nav .big-menu ul.nav-links > li > a:visited:hover,
+  nav .big-menu ul.nav-links > li > a:visited:focus,
+  nav .big-menu ul.nav-links > li > a:visited.active {
+    background: none;
+    color: rgba(0, 0, 0, 0.8);
+    text-decoration: none;
+  }
+  /* line 169, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_mqueries.scss */
+  nav .big-menu ul.nav-links > li.expanded ul li {
+    float: none;
+    display: block;
+    padding: 0;
+    margin: 15px auto 0;
+    font-size: 1rem;
+    font-weight: 400;
+    width: 100%;
+  }
+  /* line 177, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_mqueries.scss */
+  nav .big-menu ul.nav-links > li.expanded ul li > a,
+  nav .big-menu ul.nav-links > li.expanded ul li > a:visited {
+    color: rgba(0, 0, 0, 0.4);
+    text-decoration: none;
+  }
+  /* line 181, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_mqueries.scss */
+  nav .big-menu ul.nav-links > li.expanded ul li > a:hover, nav .big-menu ul.nav-links > li.expanded ul li > a:focus, nav .big-menu ul.nav-links > li.expanded ul li > a.active,
+  nav .big-menu ul.nav-links > li.expanded ul li > a:visited:hover,
+  nav .big-menu ul.nav-links > li.expanded ul li > a:visited:focus,
+  nav .big-menu ul.nav-links > li.expanded ul li > a:visited.active {
+    background: none;
+    color: black;
+    text-decoration: none;
+  }
+  /* line 193, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_mqueries.scss */
+  nav .big-menu .branding {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  /* line 198, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_mqueries.scss */
+  nav .big-menu .branding.large {
+    width: 200px;
+    height: 200px;
+    background: transparent url("../img/fullLogo@100x2.png") no-repeat center center;
+  }
+  /* line 203, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_mqueries.scss */
+  nav .big-menu .branding.medium {
+    width: 100px;
+    height: 100px;
+    background: transparent url("../img/fullLogo@100.png") no-repeat center center;
+  }
+}
+
+@media only screen and (max-width: 767px) and (orientation: landscape) {
+  /* line 213, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_mqueries.scss */
+  html, body {
+    font-size: 10px;
+  }
+  /* line 217, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_mqueries.scss */
+  section.section .branding {
+    float: left;
+  }
+  /* line 219, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_mqueries.scss */
+  section.section .branding.large {
+    width: 100px;
+    height: 100px;
+    background: transparent url("../img/fullLogo@100.png") no-repeat center center;
+  }
+  /* line 224, /Users/eugenetetlow/htdocs/sites/threesixty-slider/wwwroot/src/styles/_mqueries.scss */
+  section.section .branding.medium {
+    width: 100px;
+    height: 100px;
+    background: transparent url("../img/fullLogo@100.png") no-repeat center center;
+  }
+}
+
+/*# sourceMappingURL=../../dist/css/custom.map */

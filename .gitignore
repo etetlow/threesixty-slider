@@ -8,3 +8,9 @@ node_modules
 deploy
 bower_components
 .sass-cache
+resources
+.vscode
+.htaccess
+.npmignore
+package-lock.json
+.editorconfig
