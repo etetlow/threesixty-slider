@@ -278,14 +278,13 @@ Browsers Supported
 ---------------------
 ![Browsers Supported](https://raw.github.com/etetlow/threesixty-slider/master/assets/browser_logos-64.png)
 
-This plugin is supported in all browsers including our beloved IE 6
+This plugin is supported in all browsers from IE 9
 Some of the added features will only work in more modern browsers
 
 Support
 ---------------------
-For support and question please contact at [gaurav@jassal.me](mailto:gaurav@jassal.me) or follow at [@gauravjassal](http://twitter.com/gauravjassal)
+For support and question please contact me at [ebtetlow@gmail.com]
 
 LICENSE
 ---------
-Copyright 2013 Gaurav Jassal
 Released under the MIT and GPL Licenses.
