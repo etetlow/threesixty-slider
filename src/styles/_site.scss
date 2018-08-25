@@ -3,9 +3,7 @@
 ------------------------------------------------*/
 
 @include font-face(Twentieth-Century, 'fonts/Tw Cen MT', 400, null, woff2 woff ttf);
-@include font-face(Twentieth-Century, 'fonts/Tw Cen MT Italic', 400, italic, woff2 woff ttf);
 @include font-face(Twentieth-Century, 'fonts/Tw Cen MT Bold', 700, null, woff2 woff ttf);
-@include font-face(Twentieth-Century, 'fonts/Tw Cen MT Bold Italic', 700, italic, woff2 woff ttf);
 
 html, body {
     font-family: sans-serif;
@@ -419,7 +417,7 @@ nav {
                 margin: 10px auto 0;
                 width: 176px;
                 height: 176px;
-                background: transparent url('/assets/logos/logo@176.png') no-repeat center center;
+                background: transparent url('../../assets/logos/logo@176.png') no-repeat center center;
                 background-size: cover;
             }
             .branding-text {
@@ -602,7 +600,7 @@ section {
                 margin: 10px auto 0;
                 width: 176px;
                 height: 176px;
-                background: transparent url('/assets/logos/logo@176.png') no-repeat center center;
+                background: transparent url('../../assets/logos/logo@176.png') no-repeat center center;
                 background-size: cover;
             }
             .branding-text {
@@ -629,7 +627,7 @@ section {
             .branding-image {
                 width: 132px;
                 height: 132px;
-                background: transparent url('/assets/logos/logo@132.png') no-repeat center center;
+                background: transparent url('../../assets/logos/logo@132.png') no-repeat center center;
                 background-size: cover;
             }
         }
