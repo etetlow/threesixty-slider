@@ -5,7 +5,7 @@
 Three Sixty Image slider plugin v2.5.2
 =================
 [![Tested with BrowserStack](https://raw.github.com/etetlow/threesixty-slider/master/assets/Browserstack-logo@2x.png)](https://browserstack.com)
-[![Built with Grunt](https://cdn.gruntjs.com/builtwith.svg)](https://gruntjs.com/)
+[![Built with Grunt](https://gruntjs.com/cdn/builtwith.svg?sanitize=true)](https://gruntjs.com/)
 
 This is a jQuery plugin to create 360 degree image sliders. The plugin is fully customizable with a number of options provided. The plugin has the ability to display images in any angle 360 degrees. This feature can be used successfully in many cases.
 e.g. on an e-commerce site to help customers look at products in detail, from any angle they desire.
